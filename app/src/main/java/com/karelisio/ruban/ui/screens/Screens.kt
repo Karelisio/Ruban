@@ -22,6 +22,10 @@ import com.karelisio.ruban.ui.screens.events.EventDetailScreen
 import com.karelisio.ruban.ui.screens.events.EventEditScreen
 import com.karelisio.ruban.ui.screens.home.HomeScreen
 import com.karelisio.ruban.ui.screens.inspire.InspireScreen
+import com.karelisio.ruban.ui.screens.received.ReceivedEditScreen
+import com.karelisio.ruban.ui.screens.received.ReceivedScreen
+import com.karelisio.ruban.ui.screens.settings.BackupScreen
+import com.karelisio.ruban.ui.screens.settings.SettingsScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaDetailScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaEditScreen
 import com.karelisio.ruban.ui.screens.people.PersonDetailScreen
@@ -40,11 +44,11 @@ object Screens {
         screen<Route.EventEdit> { EventEditScreen() }
         screen<Route.YearRecap> { YearRecapScreen() }
         screen<Route.Inspire> { InspireScreen() }
-        screen<Route.Received> { Placeholder("Cadeaux reçus") }
-        screen<Route.ReceivedEdit> { Placeholder("Cadeau reçu") }
-        screen<Route.Settings> { Placeholder("Réglages") }
+        screen<Route.Received> { ReceivedScreen() }
+        screen<Route.ReceivedEdit> { ReceivedEditScreen() }
+        screen<Route.Settings> { SettingsScreen() }
         screen<Route.Permissions> { Placeholder("Autorisations") }
-        screen<Route.Backup> { Placeholder("Sauvegarde") }
+        screen<Route.Backup> { BackupScreen() }
     }
 }
 

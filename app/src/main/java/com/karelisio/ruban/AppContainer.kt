@@ -10,6 +10,7 @@ import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
+import com.karelisio.ruban.data.backup.BackupManager
 import com.karelisio.ruban.data.db.RubanDatabase
 import com.karelisio.ruban.data.net.LinkExtractor
 import com.karelisio.ruban.data.repo.EventRepository
@@ -59,6 +60,7 @@ class AppContainer(val context: Context) {
     val reminders by lazy { ReminderScheduler(context, this) }
     val suggestions by lazy { SuggestionRepository(context, db, settings) }
     val prices by lazy { PriceTracker(db, links) }
+    val backup by lazy { BackupManager(context, this) }
 }
 
 class RubanApp : Application() {

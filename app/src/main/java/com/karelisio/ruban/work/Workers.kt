@@ -23,6 +23,22 @@ object WorkScheduler {
     private const val PRICE = "price-check"
     private const val PRICE_NOW = "price-check-now"
     private const val HOUSEKEEPING = "housekeeping"
+    private const val BACKUP = "auto-backup"
+
+    fun setAutoBackup(context: Context, enabled: Boolean) {
+        val wm = WorkManager.getInstance(context)
+        if (!enabled) {
+            wm.cancelUniqueWork(BACKUP)
+            return
+        }
+        wm.enqueueUniquePeriodicWork(
+            BACKUP,
+            ExistingPeriodicWorkPolicy.UPDATE,
+            PeriodicWorkRequestBuilder<AutoBackupWorker>(7, TimeUnit.DAYS)
+                .setConstraints(Constraints.Builder().setRequiresBatteryNotLow(true).build())
+                .build(),
+        )
+    }
 
     /** Idempotent: called on every app start. */
     fun ensure(context: Context) {
@@ -97,4 +113,10 @@ class HousekeepingWorker(context: Context, params: WorkerParameters) : Coroutine
         c.reminders.fire()
         return Result.success()
     }
+}
+
+/** Weekly encrypted backup to the folder chosen in the settings. */
+class AutoBackupWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
+    override suspend fun doWork(): Result =
+        if (runCatching { applicationContext.container.backup.autoBackup() }.isSuccess) Result.success() else Result.retry()
 }
