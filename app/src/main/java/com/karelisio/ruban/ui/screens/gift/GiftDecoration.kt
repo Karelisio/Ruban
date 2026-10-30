@@ -75,7 +75,7 @@ fun GiftDecoration(
                 drawContent()
                 if (bow.value > 0.01f) {
                     val y = 14.dp.toPx()
-                    drawBow(Offset(ribbonX.dp.toPx(), y), 15.dp.toPx(), bow.value, colors.primary, colors.tertiary)
+                    drawBow(Offset(ribbonX.dp.toPx(), y), 15.dp.toPx(), bow.value, colors.primary, androidx.compose.ui.graphics.lerp(colors.tertiary, colors.tertiaryContainer, 0.35f))
                 }
             },
     ) { content() }
@@ -123,7 +123,7 @@ fun DrawScope.drawRibbonBands(progress: Float, colors: ColorScheme, x: Float) {
     drawRect(color, Offset(x - band / 2, 0f), Size(band, size.height * v))
     if (h > 0f) {
         val y = size.height / 2
-        drawRect(color.copy(alpha = 0.22f), Offset(0f, y - band / 2), Size(size.width * h, band))
+        drawRect(color.copy(alpha = 0.13f), Offset(0f, y - band / 2), Size(size.width * h, band))
     }
 }
 

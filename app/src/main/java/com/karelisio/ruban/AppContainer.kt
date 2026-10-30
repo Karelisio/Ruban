@@ -66,7 +66,7 @@ class AppContainer(val context: Context) {
     val updates by lazy { UpdateManager(context, http, settings) }
 }
 
-class RubanApp : Application() {
+open class RubanApp : Application() {
     lateinit var container: AppContainer
         private set
 

@@ -54,6 +54,20 @@ android {
         buildConfig = true
     }
 
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+            all {
+                it.systemProperty("robolectric.dependency.repo.url", "https://maven-central.storage-download.googleapis.com/maven2")
+                it.systemProperty("robolectric.graphicsMode", "NATIVE")
+                it.systemProperty("roborazzi.test.record", "true")
+                it.maxHeapSize = "3g"
+                // Screenshot tests only run on demand: ./gradlew :app:testDebugUnitTest -Pscreenshots
+                if (!project.hasProperty("screenshots")) it.exclude("**/screens/**")
+            }
+        }
+    }
+
     packaging {
         resources.excludes += setOf("META-INF/{AL2.0,LGPL2.1}", "META-INF/versions/9/OSGI-INF/MANIFEST.MF")
     }
@@ -118,4 +132,11 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
 
     testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.androidx.work.testing)
+    testImplementation(libs.roborazzi)
+    testImplementation(libs.roborazzi.compose)
+    testImplementation(platform(libs.compose.bom))
+    testImplementation(libs.compose.ui.test.junit4)
+    debugImplementation(libs.compose.ui.test.manifest)
 }

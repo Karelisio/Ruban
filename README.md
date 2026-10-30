@@ -9,6 +9,13 @@ Les idées cadeaux de tes proches, notées au fil de l'eau. Ruban suit aussi les
 - Glance (widgets), OkHttp + Jsoup (extraction Open Graph / JSON-LD), BiometricPrompt
 - Android 12 minimum (minSdk 31)
 
+<p align="center">
+  <img src="docs/screenshots/idees.png" width="200" alt="Idées" />
+  <img src="docs/screenshots/agenda.png" width="200" alt="Agenda" />
+  <img src="docs/screenshots/inspire.png" width="200" alt="Inspire-moi" />
+  <img src="docs/screenshots/budget.png" width="200" alt="Budget" />
+</p>
+
 ## Fonctionnalités
 
 | | |
@@ -76,6 +83,7 @@ Les versions suivantes s'installent depuis l'appli : au lancement (au plus toute
 
 - JDK 21, Android SDK avec la plateforme 37.
 - Banque de suggestions : modifier `tools/suggestions/*.txt` puis lancer `python3 tools/build_suggestions.py` (la CI vérifie que le JSON est à jour).
+- Captures d'écran sans émulateur (Robolectric + Roborazzi) : `./gradlew :app:testDebugUnitTest -Pscreenshots`, images dans `app/build/shots`.
 - Sans secrets de signature, `assembleRelease` signe avec la clé de debug (pratique en local, jamais publié).
 
 ## Licences

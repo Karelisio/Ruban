@@ -25,6 +25,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.dp
 import com.karelisio.ruban.ui.theme.LocalReduceMotion
+import com.karelisio.ruban.util.Vibes
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -51,6 +52,7 @@ private class Confetto(
 fun UnwrapCelebration(onFinished: () -> Unit, modifier: Modifier = Modifier) {
     val reduce = LocalReduceMotion.current
     val haptic = LocalHapticFeedback.current
+    val context = androidx.compose.ui.platform.LocalContext.current
     val c = MaterialTheme.colorScheme
     val untie = remember { Animatable(0f) }
     val lid = remember { Animatable(0f) }
@@ -82,7 +84,7 @@ fun UnwrapCelebration(onFinished: () -> Unit, modifier: Modifier = Modifier) {
         }
         appear.animateTo(1f, spring(0.55f, Spring.StiffnessMediumLow))
         untie.animateTo(1f, tween(520, easing = FastOutSlowInEasing))
-        haptic.performHapticFeedback(HapticFeedbackType.Confirm)
+        Vibes.unwrap(context)
         coroutineScope {
             launch { lid.animateTo(1f, tween(900, easing = FastOutSlowInEasing)) }
             launch { burst.animateTo(1f, tween(2200, easing = LinearEasing)) }

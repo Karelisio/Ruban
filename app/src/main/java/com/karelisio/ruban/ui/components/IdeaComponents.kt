@@ -10,7 +10,6 @@ import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -104,12 +103,7 @@ fun PriorityTag(priority: Priority, modifier: Modifier = Modifier) {
 fun PeopleStack(people: List<Person>, size: Dp = 26.dp, max: Int = 4, modifier: Modifier = Modifier) {
     Row(modifier) {
         people.take(max).forEachIndexed { i, p ->
-            PersonAvatar(
-                p, size,
-                Modifier
-                    .offset(x = (-8 * i).dp)
-                    .border(2.dp, MaterialTheme.colorScheme.surfaceContainerLow, CircleShape),
-            )
+            PersonAvatar(p, size, Modifier.offset(x = (-6 * i).dp))
         }
         if (people.size > max) {
             Box(
@@ -183,7 +177,7 @@ fun IdeaCard(
                         )
                     }
                     if (occasion != null) {
-                        Text(occasion, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary, maxLines = 1)
+                        Text(occasion, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary, maxLines = 1, overflow = TextOverflow.Ellipsis)
                     }
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         StatusPill(idea.status)
@@ -193,6 +187,7 @@ fun IdeaCard(
                         }
                     }
                 }
+                Spacer(Modifier.width(8.dp))
                 Column(horizontalAlignment = Alignment.End) {
                     if (idea.priceCents != null) {
                         AnimatedMoney(idea.priceCents, currency = idea.currency, style = MaterialTheme.typography.titleMedium)

@@ -113,7 +113,7 @@ class PersonDetailViewModel(private val c: AppContainer, handle: SavedStateHandl
         val year = today.year
         val ownIds = own.map { it.id }.toSet()
         // Own events (birthday, name day, custom events linked to the person) + holidays.
-        val relevant = all.filter { it.id in ownIds || it.personId == null }
+        val relevant = all.filter { it.id in ownIds || (it.personId == null && EventDates.fits(it, person)) }
         val upcoming = EventDates.upcoming(relevant, mapOf(person.id to person), today).take(4)
         val given = ideas.filter { it.idea.status == GiftStatus.GIVEN }
         val thisYear = ideas.filter { (it.idea.occasionYear ?: year) == year }
@@ -124,7 +124,7 @@ class PersonDetailViewModel(private val c: AppContainer, handle: SavedStateHandl
             given = given.sortedByDescending { it.idea.givenAt ?: 0 },
             received = received.filter { it.fromPersonId == id },
             spentThisYear = thisYear.sumOf { it.idea.spentCents / it.people.size.coerceAtLeast(1) },
-            plannedThisYear = thisYear.filter { it.idea.status != GiftStatus.GIVEN }.sumOf { (it.idea.priceCents ?: 0) / it.people.size.coerceAtLeast(1) },
+            plannedThisYear = thisYear.filter { it.idea.status == GiftStatus.IDEA }.sumOf { (it.idea.priceCents ?: 0) / it.people.size.coerceAtLeast(1) },
             loaded = true,
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), PersonDetailUi())

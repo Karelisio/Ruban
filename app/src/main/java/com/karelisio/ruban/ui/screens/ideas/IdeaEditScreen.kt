@@ -292,6 +292,7 @@ fun IdeaEditScreen() {
                             checked = idea.priority == p,
                             onCheckedChange = { haptic.performHapticFeedback(HapticFeedbackType.SegmentTick); vm.update { copy(priority = p) } },
                             modifier = Modifier.weight(1f).semantics { role = Role.RadioButton },
+                            contentPadding = PaddingValues(horizontal = 6.dp),
                             shapes = when (i) {
                                 0 -> ButtonGroupDefaults.connectedLeadingButtonShapes()
                                 Priority.entries.lastIndex -> ButtonGroupDefaults.connectedTrailingButtonShapes()

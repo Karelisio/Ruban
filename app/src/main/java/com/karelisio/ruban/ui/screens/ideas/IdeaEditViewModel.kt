@@ -54,8 +54,9 @@ class IdeaEditViewModel(private val c: AppContainer, handle: SavedStateHandle) :
     val occasions = combine(c.events.observeAll(), persons, selected) { events, people, sel ->
         val byId = people.associateBy { it.id }
         val today = LocalDate.now()
+        val chosen = sel.mapNotNull(byId::get)
         val relevant = events.filter { e ->
-            e.personId == null || e.personId in sel
+            e.personId in sel || (e.personId == null && (chosen.isEmpty() || chosen.any { EventDates.fits(e, it) }))
         }
         EventDates.upcoming(relevant, byId, today)
             .filter { it.event.kind != EventKind.CUSTOM || it.event.personId == null || it.event.personId in sel }

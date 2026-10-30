@@ -116,6 +116,14 @@ object EventDates {
         return null
     }
 
+    /** Whether a shared holiday makes sense for [person] (no Mother's day for a friend…). */
+    fun fits(event: Event, person: Person): Boolean = when (event.kind) {
+        EventKind.MOTHERS_DAY, EventKind.FATHERS_DAY -> person.relation == com.karelisio.ruban.data.model.Relation.PARENT ||
+            person.relation == com.karelisio.ruban.data.model.Relation.GRANDPARENT
+        EventKind.VALENTINE -> person.relation == com.karelisio.ruban.data.model.Relation.PARTNER
+        else -> true
+    }
+
     fun titleOf(event: Event, person: Person?): String = when (event.kind) {
         EventKind.BIRTHDAY -> "Anniversaire ${person?.name?.let { "de $it" } ?: ""}".trim()
         EventKind.NAME_DAY -> "Fête ${person?.name?.let { "de $it" } ?: ""}".trim()

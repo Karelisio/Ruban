@@ -28,6 +28,7 @@ import com.karelisio.ruban.ui.nav.RubanNavHost
 import com.karelisio.ruban.ui.security.Biometric
 import com.karelisio.ruban.ui.security.LockScreen
 import com.karelisio.ruban.ui.theme.RubanTheme
+import com.karelisio.ruban.ui.theme.systemAnimationsDisabled
 import com.karelisio.ruban.ui.update.UpdateSheetHost
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
@@ -55,6 +56,19 @@ class MainActivity : FragmentActivity() {
         val splash = installSplashScreen()
         super.onCreate(savedInstanceState)
         splash.setKeepOnScreenCondition { settingsState.value == null }
+        // Signature #1, end: once tied, the bow springs forward and the splash melts into the app.
+        splash.setOnExitAnimationListener { provider ->
+            if (systemAnimationsDisabled()) {
+                provider.remove()
+                return@setOnExitAnimationListener
+            }
+            val icon = runCatching { provider.iconView }.getOrNull()
+            val fade = { provider.view.animate().alpha(0f).setDuration(200).withEndAction { provider.remove() }.start() }
+            if (icon == null) fade()
+            else icon.animate().scaleX(1.18f).scaleY(1.18f).setDuration(240)
+                .setInterpolator(android.view.animation.OvershootInterpolator(3f))
+                .withEndAction { fade() }.start()
+        }
         enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.auto(android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT),
             navigationBarStyle = SystemBarStyle.auto(android.graphics.Color.TRANSPARENT, android.graphics.Color.TRANSPARENT),

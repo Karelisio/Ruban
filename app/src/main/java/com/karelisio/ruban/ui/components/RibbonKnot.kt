@@ -44,7 +44,7 @@ fun RibbonKnot(
     progress: Float = 1f,
     knot: Float = 1f,
     ribbon: Color = MaterialTheme.colorScheme.primary,
-    knotColor: Color = MaterialTheme.colorScheme.tertiary,
+    knotColor: Color = androidx.compose.ui.graphics.lerp(MaterialTheme.colorScheme.tertiary, MaterialTheme.colorScheme.tertiaryContainer, 0.35f),
     wiggle: Float = 0f,
 ) {
     val path = remember { bowPath() }

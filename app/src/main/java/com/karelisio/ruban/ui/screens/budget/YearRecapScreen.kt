@@ -128,7 +128,7 @@ fun YearRecapScreen() {
                 RecapCard("Mois par mois", Modifier.cascade(1)) {
                     val values = data.byMonth.map { it.toFloat() }
                     val max = values.indices.maxByOrNull { values[it] } ?: -1
-                    ColumnChart(values, Modifier.fillMaxWidth().height(140.dp), color = c.secondaryContainer, highlight = if (values.any { it > 0 }) max else -1, highlightColor = c.primary)
+                    ColumnChart(values, Modifier.fillMaxWidth().height(140.dp), color = c.primary.copy(alpha = 0.32f), highlight = if (values.any { it > 0 }) max else -1, highlightColor = c.primary)
                     Row(Modifier.fillMaxWidth()) {
                         (1..12).forEach { m ->
                             Text(Dates.monthShort(m).take(1).uppercase(), Modifier.weight(1f), textAlign = TextAlign.Center, style = MaterialTheme.typography.labelSmall, color = c.onSurfaceVariant)

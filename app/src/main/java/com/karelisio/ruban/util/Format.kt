@@ -67,7 +67,7 @@ object Dates {
         days == 1L -> "Demain"
         days == -1L -> "Hier"
         days < 0 -> "Il y a ${-days} jours"
-        days < 7 -> "Dans $days jours"
+        days < 14 -> "Dans $days jours"
         days < 60 -> "Dans ${days / 7} semaine${if (days / 7 > 1) "s" else ""}"
         else -> "Dans ${days / 30} mois"
     }

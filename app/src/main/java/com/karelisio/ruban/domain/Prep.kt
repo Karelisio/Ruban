@@ -7,7 +7,7 @@ import com.karelisio.ruban.data.model.IdeaWithPeople
 enum class Prep(val label: String, val emoji: String) {
     READY("Cadeau prêt", "🎁"),
     IDEA("Idée trouvée", "💡"),
-    NOTHING("Rien encore", "🫥"),
+    NOTHING("Rien encore", "💭"),
     DONE("Offert", "🎉"),
 }
 
