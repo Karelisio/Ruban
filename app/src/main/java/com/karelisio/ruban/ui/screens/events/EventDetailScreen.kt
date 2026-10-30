@@ -70,6 +70,8 @@ import com.karelisio.ruban.ui.components.cascade
 import com.karelisio.ruban.ui.components.sharedBounds
 import com.karelisio.ruban.ui.nav.LocalNav
 import com.karelisio.ruban.ui.nav.Route
+import com.karelisio.ruban.ui.permissions.AppPermission
+import com.karelisio.ruban.ui.permissions.PermissionBanner
 import com.karelisio.ruban.ui.screens.home.AgendaItem
 import com.karelisio.ruban.ui.screens.home.PrepChip
 import com.karelisio.ruban.ui.screens.home.agendaItem
@@ -286,6 +288,9 @@ private fun RemindersSection(event: Event, global: List<Int>, update: (Event.() 
                     Switch(event.remindersEnabled, { v -> update { copy(remindersEnabled = v) } })
                 }
                 if (event.remindersEnabled) {
+                    PermissionBanner(AppPermission.NOTIFICATIONS, "Les notifications sont coupées : aucun rappel ne s'affichera.")
+                    PermissionBanner(AppPermission.EXACT_ALARMS, "Sans alarmes exactes, les rappels peuvent arriver en retard.")
+                    PermissionBanner(AppPermission.BATTERY, "L'optimisation de batterie peut bloquer les rappels.")
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
                             Text("Réglage général", style = MaterialTheme.typography.bodyLarge)

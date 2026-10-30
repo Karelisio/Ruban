@@ -333,6 +333,7 @@ fun IdeaEditScreen() {
                     Switch(idea.priceTracking, { v -> vm.update { copy(priceTracking = v) } })
                 }
                 if (idea.priceTracking) {
+                    com.karelisio.ruban.ui.permissions.PermissionBanner(AppPermission.NOTIFICATIONS, "Active les notifications pour être prévenu des baisses.")
                     MoneyField(
                         idea.priceAlertCents, { v -> vm.update { copy(priceAlertCents = v) } },
                         "Me prévenir sous", currency = idea.currency,

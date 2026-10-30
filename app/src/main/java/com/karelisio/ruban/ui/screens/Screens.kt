@@ -22,9 +22,11 @@ import com.karelisio.ruban.ui.screens.events.EventDetailScreen
 import com.karelisio.ruban.ui.screens.events.EventEditScreen
 import com.karelisio.ruban.ui.screens.home.HomeScreen
 import com.karelisio.ruban.ui.screens.inspire.InspireScreen
+import com.karelisio.ruban.ui.screens.onboarding.OnboardingScreen
 import com.karelisio.ruban.ui.screens.received.ReceivedEditScreen
 import com.karelisio.ruban.ui.screens.received.ReceivedScreen
 import com.karelisio.ruban.ui.screens.settings.BackupScreen
+import com.karelisio.ruban.ui.screens.settings.PermissionsScreen
 import com.karelisio.ruban.ui.screens.settings.SettingsScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaDetailScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaEditScreen
@@ -35,7 +37,7 @@ import com.karelisio.ruban.ui.screens.people.PersonEditScreen
 object Screens {
     fun register(builder: NavGraphBuilder) = with(builder) {
         screen<Route.Home> { HomeScreen(it.toRoute<Route.Home>().tab) }
-        screen<Route.Onboarding> { Placeholder("Bienvenue") }
+        screen<Route.Onboarding> { OnboardingScreen() }
         screen<Route.PersonDetail> { PersonDetailScreen() }
         screen<Route.PersonEdit> { PersonEditScreen() }
         screen<Route.IdeaDetail> { IdeaDetailScreen() }
@@ -47,7 +49,7 @@ object Screens {
         screen<Route.Received> { ReceivedScreen() }
         screen<Route.ReceivedEdit> { ReceivedEditScreen() }
         screen<Route.Settings> { SettingsScreen() }
-        screen<Route.Permissions> { Placeholder("Autorisations") }
+        screen<Route.Permissions> { PermissionsScreen() }
         screen<Route.Backup> { BackupScreen() }
     }
 }
