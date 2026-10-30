@@ -3,6 +3,12 @@ name: Release
 on:
   push:
     tags: ["v*.*.*"]
+  # Manual release: creates the tag vX.Y.Z on the selected commit.
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version à publier (ex. 0.1.0)"
+        required: true
 
 permissions:
   contents: write
@@ -25,8 +31,13 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
-      - name: Version from tag
-        run: echo "VERSION_NAME=${GITHUB_REF_NAME#v}" >> "$GITHUB_ENV"
+      - name: Version
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if [ -n "$INPUT_VERSION" ]; then V="${INPUT_VERSION#v}"; else V="${GITHUB_REF_NAME#v}"; fi
+          echo "VERSION_NAME=$V" >> "$GITHUB_ENV"
+          echo "TAG=v$V" >> "$GITHUB_ENV"
 
       - name: Decode keystore
         env:
@@ -50,12 +61,12 @@ jobs:
         run: |
           APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
           "$APKSIGNER" verify --print-certs app/build/outputs/apk/release/app-release.apk | head -5
-          cp app/build/outputs/apk/release/app-release.apk "Ruban-${GITHUB_REF_NAME}.apk"
+          cp app/build/outputs/apk/release/app-release.apk "Ruban-${TAG}.apk"
 
       - name: Changelog
         run: |
-          PREVIOUS=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || true)
-          RANGE=${PREVIOUS:+$PREVIOUS..}${GITHUB_REF_NAME}
+          PREVIOUS=$(git describe --tags --abbrev=0 --exclude "$TAG" HEAD 2>/dev/null || true)
+          RANGE=${PREVIOUS:+$PREVIOUS..}HEAD
           {
             echo "## Nouveautés"
             echo
@@ -69,7 +80,9 @@ jobs:
       - name: Publish GitHub release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ env.TAG }}
+          target_commitish: ${{ github.sha }}
           name: Ruban ${{ env.VERSION_NAME }}
           body_path: CHANGELOG_RELEASE.md
-          files: Ruban-${{ github.ref_name }}.apk
+          files: Ruban-${{ env.TAG }}.apk
           fail_on_unmatched_files: true

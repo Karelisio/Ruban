@@ -63,6 +63,8 @@ git tag v0.1.0
 git push origin v0.1.0
 ```
 
+Ou sans terminal : onglet *Actions → Release → Run workflow*, saisir la version (ex. `0.1.1`) ; le workflow crée le tag lui-même.
+
 Le workflow **Release** lance les tests, construit l'APK signé (R8 activé), vérifie la signature et publie une GitHub Release `Ruban-v0.1.0.apk` avec le changelog (messages de commit depuis le tag précédent). `versionCode` = numéro d'exécution du workflow, `versionName` = tag sans le `v`.
 
 Le dépôt est public : l'appli lit directement `releases/latest` de `Karelisio/Ruban`. S'il devient privé, crée un dépôt public dédié (ex. `Karelisio/Ruban-releases`), publies-y les APK et ajoute la variable d'environnement `RUBAN_UPDATE_REPO` au workflow.
