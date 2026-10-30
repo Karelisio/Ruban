@@ -11,6 +11,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.karelisio.ruban.data.db.RubanDatabase
+import com.karelisio.ruban.data.net.LinkExtractor
 import com.karelisio.ruban.data.repo.EventRepository
 import com.karelisio.ruban.data.repo.IdeaRepository
 import com.karelisio.ruban.data.repo.PersonRepository
@@ -21,6 +22,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import okhttp3.OkHttpClient
+import java.util.concurrent.TimeUnit
 
 /** Manual dependency container, created once by [RubanApp]. */
 class AppContainer(val context: Context) {
@@ -32,6 +35,15 @@ class AppContainer(val context: Context) {
     val events by lazy { EventRepository(db) }
     val ideas by lazy { IdeaRepository(db, photos) }
     val received by lazy { ReceivedRepository(db, photos) }
+    val http: OkHttpClient by lazy {
+        OkHttpClient.Builder()
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .callTimeout(30, TimeUnit.SECONDS)
+            .followRedirects(true)
+            .build()
+    }
+    val links by lazy { LinkExtractor(http, photos) }
 }
 
 class RubanApp : Application() {

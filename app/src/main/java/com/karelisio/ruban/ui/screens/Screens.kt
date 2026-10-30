@@ -18,16 +18,20 @@ import com.karelisio.ruban.ui.nav.LocalNav
 import com.karelisio.ruban.ui.nav.Route
 import com.karelisio.ruban.ui.nav.screen
 import com.karelisio.ruban.ui.screens.home.HomeScreen
+import com.karelisio.ruban.ui.screens.ideas.IdeaDetailScreen
+import com.karelisio.ruban.ui.screens.ideas.IdeaEditScreen
+import com.karelisio.ruban.ui.screens.people.PersonDetailScreen
+import com.karelisio.ruban.ui.screens.people.PersonEditScreen
 
 /** Registers every destination of the app. */
 object Screens {
     fun register(builder: NavGraphBuilder) = with(builder) {
         screen<Route.Home> { HomeScreen(it.toRoute<Route.Home>().tab) }
         screen<Route.Onboarding> { Placeholder("Bienvenue") }
-        screen<Route.PersonDetail> { Placeholder("Proche") }
-        screen<Route.PersonEdit> { Placeholder("Modifier le proche") }
-        screen<Route.IdeaDetail> { Placeholder("Idée") }
-        screen<Route.IdeaEdit> { Placeholder("Nouvelle idée") }
+        screen<Route.PersonDetail> { PersonDetailScreen() }
+        screen<Route.PersonEdit> { PersonEditScreen() }
+        screen<Route.IdeaDetail> { IdeaDetailScreen() }
+        screen<Route.IdeaEdit> { IdeaEditScreen() }
         screen<Route.EventDetail> { Placeholder("Événement") }
         screen<Route.EventEdit> { Placeholder("Événement") }
         screen<Route.YearRecap> { Placeholder("Récap") }
