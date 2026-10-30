@@ -16,11 +16,13 @@ import com.karelisio.ruban.data.repo.EventRepository
 import com.karelisio.ruban.data.repo.IdeaRepository
 import com.karelisio.ruban.data.repo.PersonRepository
 import com.karelisio.ruban.data.repo.PhotoStore
+import com.karelisio.ruban.data.repo.PriceTracker
 import com.karelisio.ruban.data.repo.ReceivedRepository
 import com.karelisio.ruban.data.repo.SuggestionRepository
 import com.karelisio.ruban.data.settings.SettingsRepository
 import com.karelisio.ruban.notify.Notifications
 import com.karelisio.ruban.notify.ReminderScheduler
+import com.karelisio.ruban.work.WorkScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -56,6 +58,7 @@ class AppContainer(val context: Context) {
     val links by lazy { LinkExtractor(http, photos) }
     val reminders by lazy { ReminderScheduler(context, this) }
     val suggestions by lazy { SuggestionRepository(context, db, settings) }
+    val prices by lazy { PriceTracker(db, links) }
 }
 
 class RubanApp : Application() {
@@ -66,6 +69,7 @@ class RubanApp : Application() {
         super.onCreate()
         container = AppContainer(this)
         Notifications.createChannels(this)
+        WorkScheduler.ensure(this)
         container.scope.launch {
             val settings = container.settings.current()
             if (!settings.holidaysSeeded) {

@@ -23,6 +23,7 @@ import androidx.compose.material.icons.automirrored.rounded.OpenInNew
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Edit
 import androidx.compose.material.icons.rounded.MoreVert
+import androidx.compose.material.icons.rounded.Refresh
 import androidx.compose.material.icons.automirrored.rounded.TrendingDown
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
@@ -105,6 +106,23 @@ class IdeaDetailViewModel(private val c: AppContainer, handle: SavedStateHandle)
 
     fun setStatus(status: GiftStatus) = viewModelScope.launch { c.ideas.setStatus(id, status) }
 
+    val checking = kotlinx.coroutines.flow.MutableStateFlow(false)
+
+    fun checkPrice(onResult: (String) -> Unit) = viewModelScope.launch {
+        val idea = c.ideas.get(id)?.idea ?: return@launch
+        checking.value = true
+        val change = c.prices.check(idea)
+        checking.value = false
+        onResult(
+            when {
+                change == null -> "Prix introuvable sur la page"
+                change.before != null && change.after < change.before -> "Bonne nouvelle : le prix a baissé !"
+                change.before != null && change.after > change.before -> "Le prix a augmenté"
+                else -> "Prix inchangé"
+            },
+        )
+    }
+
     fun markGiven(result: GivenResult) = viewModelScope.launch {
         val idea = c.ideas.get(id)?.idea ?: return@launch
         c.ideas.update(
@@ -139,6 +157,8 @@ fun IdeaDetailScreen() {
     var confirmDelete by rememberSaveable { mutableStateOf(false) }
     var givingSheet by rememberSaveable { mutableStateOf(false) }
     var celebrate by remember { mutableStateOf(false) }
+    val checking by vm.checking.collectAsStateWithLifecycle()
+    val snackbar = remember { androidx.compose.material3.SnackbarHostState() }
     val item = ui.item
 
     if (confirmDelete) {
@@ -165,6 +185,7 @@ fun IdeaDetailScreen() {
     Box(Modifier.fillMaxSize()) {
         Scaffold(
             modifier = Modifier.sharedBounds(SharedKeys.idea(vm.id)),
+            snackbarHost = { androidx.compose.material3.SnackbarHost(snackbar) },
             topBar = {
                 TopAppBar(
                     title = {},
@@ -242,7 +263,13 @@ fun IdeaDetailScreen() {
 
                 if (idea.status == GiftStatus.GIVEN) GivenCard(item)
 
-                PriceCard(idea.priceCents, idea.currency, ui.prices, idea.priceAlertCents, idea.url) { url ->
+                PriceCard(
+                    idea.priceCents, idea.currency, ui.prices, idea.priceAlertCents, idea.url,
+                    checking = checking,
+                    onCheck = if (idea.status == GiftStatus.IDEA && idea.url != null) {
+                        { vm.checkPrice { msg -> scope.launch { snackbar.showSnackbar(msg) } } }
+                    } else null,
+                ) { url ->
                     runCatching { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
                 }
 
@@ -293,7 +320,16 @@ private fun GivenCard(item: IdeaWithPeople) {
 }
 
 @Composable
-private fun PriceCard(price: Long?, currency: String, history: List<PricePoint>, alert: Long?, url: String?, openUrl: (String) -> Unit) {
+private fun PriceCard(
+    price: Long?,
+    currency: String,
+    history: List<PricePoint>,
+    alert: Long?,
+    url: String?,
+    checking: Boolean,
+    onCheck: (() -> Unit)?,
+    openUrl: (String) -> Unit,
+) {
     if (price == null && url == null) return
     Surface(shape = MaterialTheme.shapes.large, color = MaterialTheme.colorScheme.surfaceContainerLow) {
         Column(Modifier.fillMaxWidth().padding(16.dp)) {
@@ -302,6 +338,10 @@ private fun PriceCard(price: Long?, currency: String, history: List<PricePoint>,
                     Text("Prix", style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary)
                     if (price != null) AnimatedMoney(price, currency = currency, style = MaterialTheme.typography.displaySmall)
                     else Text("—", style = MaterialTheme.typography.displaySmall)
+                }
+                if (onCheck != null) {
+                    if (checking) androidx.compose.material3.LoadingIndicator(Modifier.size(40.dp))
+                    else IconButton(onClick = onCheck) { Icon(Icons.Rounded.Refresh, "Vérifier le prix maintenant") }
                 }
                 if (url != null) {
                     FilledTonalButton(onClick = { openUrl(url) }, shapes = ButtonDefaults.shapes()) {
