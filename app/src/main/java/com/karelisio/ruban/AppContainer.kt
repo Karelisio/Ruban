@@ -17,6 +17,7 @@ import com.karelisio.ruban.data.repo.IdeaRepository
 import com.karelisio.ruban.data.repo.PersonRepository
 import com.karelisio.ruban.data.repo.PhotoStore
 import com.karelisio.ruban.data.repo.ReceivedRepository
+import com.karelisio.ruban.data.repo.SuggestionRepository
 import com.karelisio.ruban.data.settings.SettingsRepository
 import com.karelisio.ruban.notify.Notifications
 import com.karelisio.ruban.notify.ReminderScheduler
@@ -54,6 +55,7 @@ class AppContainer(val context: Context) {
     }
     val links by lazy { LinkExtractor(http, photos) }
     val reminders by lazy { ReminderScheduler(context, this) }
+    val suggestions by lazy { SuggestionRepository(context, db, settings) }
 }
 
 class RubanApp : Application() {
@@ -70,6 +72,7 @@ class RubanApp : Application() {
                 container.events.seedHolidays()
                 container.settings.setHolidaysSeeded(true)
             }
+            runCatching { container.suggestions.ensureLoaded() }
         }
         observeReminderInputs()
     }

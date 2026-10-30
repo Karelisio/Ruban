@@ -21,6 +21,7 @@ import com.karelisio.ruban.ui.screens.budget.YearRecapScreen
 import com.karelisio.ruban.ui.screens.events.EventDetailScreen
 import com.karelisio.ruban.ui.screens.events.EventEditScreen
 import com.karelisio.ruban.ui.screens.home.HomeScreen
+import com.karelisio.ruban.ui.screens.inspire.InspireScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaDetailScreen
 import com.karelisio.ruban.ui.screens.ideas.IdeaEditScreen
 import com.karelisio.ruban.ui.screens.people.PersonDetailScreen
@@ -38,7 +39,7 @@ object Screens {
         screen<Route.EventDetail> { EventDetailScreen() }
         screen<Route.EventEdit> { EventEditScreen() }
         screen<Route.YearRecap> { YearRecapScreen() }
-        screen<Route.Inspire> { Placeholder("Inspire-moi") }
+        screen<Route.Inspire> { InspireScreen() }
         screen<Route.Received> { Placeholder("Cadeaux reçus") }
         screen<Route.ReceivedEdit> { Placeholder("Cadeau reçu") }
         screen<Route.Settings> { Placeholder("Réglages") }

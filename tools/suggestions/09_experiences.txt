@@ -1,0 +1,29 @@
+@ *
+M E * * | Atelier poterie à deux | Créer ensemble une pièce unique.
+L E * * | Saut en parachute ou soufflerie | Une montée d'adrénaline.
+M E * * | Escape game entre amis | Une heure d'énigmes ensemble.
+M E * * | Karting | Une course pleine de rires.
+L E * * | Vol en ULM | Survoler la région.
+M E * * | Atelier parfum | Créer son propre parfum.
+M E * * | Initiation à la plongée en fosse | Une première respiration sous l'eau.
+M E * * | Accrobranche | Une journée dans les arbres.
+L E * * | Baptême en hélicoptère | Une vue imprenable.
+M E * * | Cours de pilotage de drone | Apprendre à voler.
+M E * * | Atelier de souffleur de verre | Découvrir un artisanat fascinant.
+M E * * | Bain nordique ou bain de forêt | Une expérience ressourçante.
+M E * * | Atelier de fabrication de couteau | Forger sa propre lame.
+L E * * | Croisière dîner | Un repas au fil de l'eau.
+M E * * | Atelier tatouage éphémère au henné | Un dessin qui dure quelques jours.
+M E * * | Cours de cocktail en duo | Créer des cocktails ensemble.
+M E * * | Séance de flottaison | Une relaxation profonde.
+M E * * | Visite d'une ferme et traite des vaches | Une journée nature.
+M E * * | Cours de cuisine du monde | Découvrir une nouvelle cuisine.
+L E * * | Vol en planeur | Le silence du vol plané.
+M E * * | Balade à cheval | Une sortie au pas dans la nature.
+M E * * | Atelier de reliure | Fabriquer son propre carnet.
+M E * * | Laser game | Une partie survoltée entre amis.
+M E * * | Bowling et dîner | Une soirée détente.
+M E * * | Karaoké en salle privée | Chanter sans complexe.
+L E * pa,fa | Nuit en roulotte | Une escapade insolite.
+M E * * | Visite guidée nocturne | Découvrir sa ville autrement.
+M E * * | Initiation au tir à l'arc | Concentration et précision.

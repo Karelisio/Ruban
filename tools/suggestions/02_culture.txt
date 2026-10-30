@@ -1,0 +1,106 @@
+@ lecture
+S O * * | Roman d'un auteur qu'il ou elle adore | Le dernier paru, à offrir le jour de sa sortie.
+S O * * | Marque-page en laiton gravé | Un petit objet qui accompagnera chaque lecture.
+M O * * | Liseuse avec éclairage chaud | Toute une bibliothèque dans la poche.
+S O * * | Lampe de lecture à pince | Pour lire au lit sans déranger.
+M A * * | Abonnement à une box livres | Un roman surprise et des douceurs chaque mois.
+S H * * | Couverture de livre en tissu cousue main | Protège et personnalise ses livres.
+M O * * | Coffret d'une saga complète | Pour les longues soirées d'hiver.
+L O * * | Fauteuil de lecture cosy | Le coin lecture idéal.
+S O * * | Carnet de lecture | Pour noter ses livres et citations préférées.
+M E * * | Rencontre avec un auteur ou salon du livre | Une dédicace à la clé.
+S O * * | Édition illustrée d'un classique | Un beau livre à garder.
+M A * * | Abonnement à des livres audio | Pour lire en marchant ou en conduisant.
+
+@ bd
+S O * * | Album d'une série de BD qu'il ou elle suit | Le tome qui manque à la collection.
+M O * * | Intégrale d'un manga culte | Pour (re)découvrir une saga.
+M O * * | Tirage d'art d'un dessinateur | Une affiche signée à encadrer.
+M E * * | Festival de BD | Une journée de dédicaces et d'expositions.
+S O * * | Figurine d'un personnage préféré | Pour décorer une étagère.
+M A * * | Abonnement à un magazine de BD | Des histoires chaque mois.
+
+@ ecriture
+M O * * | Stylo plume de qualité | Pour le plaisir d'écrire à la main.
+S O * * | Encres de couleur en coffret | Des teintes rares pour stylo plume.
+M E * * | Atelier d'écriture | Se lancer dans la nouvelle ou le récit de vie.
+S O * * | Carnet en cuir rechargeable | Un compagnon d'écriture durable.
+S O * * | Livre de techniques d'écriture | Pour structurer ses idées et ses histoires.
+M E * * | Cours de calligraphie | Apprendre l'art des belles lettres.
+
+@ papeterie
+S O * * | Carnet à pointillés de qualité | Pour bullet journal et croquis.
+S O * * | Set de feutres pinceaux | Pour lettrage et illustrations.
+S O * * | Tampons et encreurs | Personnaliser cartes et carnets.
+S H * * | Cartes de vœux faites main | Un petit lot pour l'année.
+M O * * | Agenda de l'année en tissu | Beau et pratique pour s'organiser.
+S O * * | Washi tapes en assortiment | Pour décorer carnets et paquets.
+M O * * | Sceau de cire et bâtons colorés | Des lettres comme autrefois.
+
+@ musique
+M E * * | Places de concert | L'artiste qu'il ou elle écoute en boucle.
+M O * * | Enceinte portable | Sa musique partout avec un bon son.
+L O * * | Casque à réduction de bruit | Pour s'isoler dans la musique.
+M E * * | Cours d'instrument d'essai | Guitare, piano ou chant, pour se lancer.
+S O * * | Partitions d'un morceau aimé | Pour le jouer soi-même.
+M A * * | Abonnement à un service de musique | Des millions de titres, sans pub.
+L E * * | Festival de musique avec pass week-end | Trois jours de concerts.
+S H * pa,fr | Playlist personnalisée avec pochette | Les chansons qui racontent votre histoire.
+M O * * | Ukulélé débutant | Facile à apprendre, joyeux à jouer.
+L O * * | Clavier numérique | Pour apprendre ou reprendre le piano.
+S O * * | Accordeur et capodastre | Les accessoires du guitariste.
+
+@ vinyles
+M O * * | Vinyle d'un album culte | Une réédition de son album fétiche.
+L O * * | Platine vinyle | Pour redécouvrir le son analogique.
+S O * * | Brosse et kit d'entretien vinyles | Prendre soin de sa collection.
+M O * * | Meuble ou bac de rangement vinyles | Pour ranger et exposer ses disques.
+M A * * | Abonnement vinyle du mois | Un disque surprise chaque mois.
+
+@ cinema
+S O * * | Coffret de films d'un réalisateur | L'intégrale d'un cinéaste aimé.
+M E * * | Carte de cinéma | Plusieurs séances à utiliser librement.
+M O * * | Vidéoprojecteur compact | Le cinéma à la maison.
+S O * * | Affiche de film vintage | Pour décorer son salon.
+M E * pa,fr | Séance en cinéma plein air ou drive-in | Une soirée originale.
+S O * * | Livre sur l'histoire du cinéma | Un beau livre à feuilleter.
+M A * * | Abonnement à une plateforme de films d'auteur | Des pépites à découvrir.
+S O * * | Kit soirée film (pop-corn gourmet et plaid) | Tout pour un dimanche soir cocooning.
+
+@ theatre
+M E * * | Places de théâtre | Une pièce dont tout le monde parle.
+L E * * | Soirée à l'opéra ou au ballet | Une sortie élégante et inoubliable.
+M E * * | Spectacle d'humour | Une soirée de rires garantis.
+M E * * | Stage d'improvisation théâtrale | Gagner en confiance en s'amusant.
+M E * * | Abonnement de saison au théâtre local | Plusieurs spectacles dans l'année.
+M E * * | Spectacle de cirque contemporain | Poésie et prouesses.
+
+@ histoire
+S O * * | Livre d'histoire illustré | Une période qui le ou la passionne.
+M E * * | Visite guidée d'un château | Une journée dans le passé.
+M E * * | Escape game historique | Résoudre une énigme d'époque.
+S O * * | Carte ancienne en reproduction | Sa ville ou sa région autrefois.
+M A * * | Abonnement à un magazine d'histoire | Pour continuer à apprendre.
+M E * * | Pass musées de la région | Des visites à volonté.
+
+@ langues
+M A * * | Cours de langue en ligne | Progresser à son rythme.
+S O * * | Roman en version originale | Pour pratiquer en se faisant plaisir.
+M E * * | Atelier de conversation | Parler avec des natifs.
+S O * * | Jeu de cartes de vocabulaire | Apprendre en jouant.
+P E * pa,fa | Séjour linguistique court | Une immersion totale.
+
+@ sciences
+M O * * | Microscope de découverte | Explorer l'invisible.
+S O * * | Livre de vulgarisation scientifique | Des questions passionnantes expliquées simplement.
+M O * * | Kit d'expériences de chimie | Pour les curieux de tout âge.
+M E * * | Visite d'une cité des sciences | Une journée d'expériences.
+M A * * | Abonnement à un magazine scientifique | De quoi alimenter les discussions.
+
+@ astronomie
+L O * * | Télescope pour débutants | Observer la Lune et les planètes.
+S O * * | Carte du ciel tournante | Repérer les constellations.
+M O * * | Projecteur d'étoiles | Un ciel étoilé au plafond.
+M E * * | Soirée d'observation au planétarium | La tête dans les étoiles.
+M O * pa | Carte du ciel d'une date importante | Les étoiles le jour de votre rencontre.
+L E * * | Nuit en observatoire | Une nuit à observer avec des passionnés.

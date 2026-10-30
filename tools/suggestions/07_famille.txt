@@ -1,0 +1,60 @@
+@ enfance
+S O * ch | Livre illustré à lire ensemble | Une belle histoire pour le soir.
+M O * ch | Jeu de construction en bois | Des heures d'imagination.
+S O * ch | Kit de loisirs créatifs | Peinture, perles et pâte à modeler.
+M O * ch | Draisienne ou trottinette | Pour filer dehors.
+M E * ch | Journée au zoo ou à l'aquarium | Des étoiles plein les yeux.
+M O * ch | Déguisement de son héros préféré | Pour les jeux et les fêtes.
+S O * ch | Lampe veilleuse étoilée | Pour s'endormir sans peur.
+M O * ch | Kit d'expériences scientifiques enfant | Petits chimistes en herbe.
+M E * ch | Spectacle pour enfants | Une première sortie au théâtre.
+S O * ch | Jeu de cartes éducatif | Apprendre en s'amusant.
+M A * ch | Abonnement à un magazine jeunesse | Des histoires chaque mois dans la boîte aux lettres.
+M O * ch | Cabane de jardin en tissu | Un repaire secret.
+L E * ch | Journée dans un parc d'attractions | Des souvenirs inoubliables.
+S H * ch | Livre personnalisé où l'enfant est le héros | Son prénom dans l'histoire.
+M O * ch | Instrument de musique pour enfant | Xylophone, ukulélé ou percussion.
+M O * ch | Puzzle géant de la carte du monde | Apprendre la géographie.
+
+@ bebe
+S O * * | Doudou tout doux | Le premier compagnon.
+M O * * | Mobile musical | Pour les éveils en douceur.
+S O * * | Body brodé à son prénom | Une première tenue personnalisée.
+M O * * | Tapis d'éveil | Des découvertes dès les premières semaines.
+M O * * | Boîte à souvenirs de naissance | Pour garder bracelet et premières photos.
+S O * * | Livres en tissu | Pour les petites mains.
+M O * * | Gigoteuse douce | Des nuits au chaud.
+S H * * | Couverture tricotée main | Un cadeau de naissance unique.
+
+@ parentalite
+M E * pr,si,fr | Soirée baby-sitting offerte | Une soirée libre pour souffler.
+M O * pr,si,fr | Porte-bébé ergonomique | Les mains libres, bébé contre soi.
+S O * pr,si,fr | Journal des premières années | Noter les premières fois.
+M A * pr,si,fr | Livraison de repas faits maison | Des plats prêts pour les premières semaines.
+M E * pr,si,fr | Séance photo de famille | De beaux souvenirs.
+S H * pr,si,fr | Bons « je m'occupe de tout » | Ménage, courses, garde : à utiliser librement.
+
+@ *
+M E * gp | Après-midi photo avec les petits-enfants | Un portrait de famille réunie.
+M O * gp | Cadre photo des petits-enfants | Les sourires toujours sous les yeux.
+S H * gp | Calendrier photo de famille | Douze mois de souvenirs.
+M O * gp | Livre « Raconte-moi ta vie » | Un journal à remplir pour transmettre son histoire.
+M E * gp | Déjeuner dans son restaurant préféré | Un moment partagé.
+S O * gp | Plaid tout doux | Pour les siestes au chaud.
+M O * gp | Tablette simplifiée pour les appels vidéo | Voir la famille plus souvent.
+S H * gp,pr | Lettre manuscrite de souvenirs | Ce que vous lui devez, écrit à la main.
+M E * pr,gp | Journée découverte en famille | Une sortie qui réunit tout le monde.
+L E * pr | Week-end détente pour les parents | Du repos bien mérité.
+S H M pr | Bouquet de fleurs en papier | Il ne fanera jamais.
+M O M pr | Coffret de soins pour maman | Un moment pour elle.
+S H M,F pr,gp | Bons pour un service à rendre | Jardinage, repas ou bricolage offerts.
+M E M pr | Brunch en famille | Toute la famille réunie autour d'elle.
+M O M pr | Bijou avec les prénoms des enfants | Un lien précieux.
+M O F pr | Coffret barbecue | Pinces, tablier et épices.
+M E F pr | Atelier dégustation de whisky | Pour les amateurs.
+S O F pr | Portefeuille en cuir | Un classique bien fait.
+M O F pr | Coffret rasage traditionnel | Rasoir, blaireau et savon.
+M E F pr | Sortie pêche ou match ensemble | Un moment père-enfant.
+S O B si | Jeu de société pour soirées entre frères et sœurs | Pour les retrouvailles.
+S H * si | Bocal de souvenirs d'enfance | Des petits mots de vos meilleurs moments.
+M E * si | Sortie entre frères et sœurs | Un escape game ou un karting.

@@ -1,0 +1,45 @@
+@ *
+S H V pa | Lettre d'amour sur papier ancien | Les mots qu'on ne dit pas assez.
+M E V pa | Dîner aux chandelles à la maison | Menu préparé avec amour.
+M E V pa | Cours de cuisine en duo | Préparer un repas à quatre mains.
+S H V pa | Bocal « 52 raisons pour lesquelles je t'aime » | Un petit mot pour chaque semaine.
+M O V pa | Bouquet de fleurs séchées | Romantique et durable.
+P E V pa | Nuit dans un hôtel de charme | Une parenthèse à deux.
+M E V,B pa | Massage en duo | Se détendre ensemble.
+S H V,B pa | Album « nos premières fois » | Vos souvenirs en photos et anecdotes.
+M O V pa | Coffret de jeux pour couples | Des questions pour mieux se connaître.
+M O V pa | Puzzle de votre plus belle photo | Un souvenir à reconstituer à deux.
+M E V,B pa | Balade en calèche ou en bateau | Une sortie romantique.
+S O V pa | Chocolats en forme de cœur | Le classique gourmand.
+S O X * | Calendrier de l'Avent gourmand | Une surprise chaque jour de décembre.
+S H X * | Biscuits de Noël décorés | Faits maison, dans une jolie boîte.
+M O X * | Pull de Noël rigolo | Pour la photo de famille.
+S O X * | Boule de Noël personnalisée | Avec son prénom et l'année.
+M E X * | Marché de Noël dans une ville voisine | Une sortie féerique.
+S H X * | Couronne de l'Avent faite main | Pour décorer la table.
+S O X * | Kit de chocolat chaud gourmand | Cacao, guimauves et épices.
+M O X fa,pr,ch | Jeu de société pour les fêtes | De quoi animer les réveillons.
+S O X co,fr | Tasse de Noël garnie de douceurs | Un petit cadeau pour le Secret Santa.
+S O N * | Fleur en pot pour sa fête | Une attention simple pour sa fête.
+S O N * | Gâteau de son pâtissier préféré | Pour fêter son prénom.
+S H N * | Carte avec la signification de son prénom | Une petite histoire à lire.
+S O C * | Plante pour la crémaillère | Pour verdir le nouveau logement.
+M O C * | Coffret apéro pour la crémaillère | Pour trinquer dans le nouveau chez-soi.
+S O C * | Paillasson personnalisé | Le premier objet de la maison.
+M O C * | Coffret de vins pour un mariage | Pour les grandes occasions à venir.
+M O C * | Cadre souvenir de mariage | La date et les prénoms des mariés.
+L E C * | Participation à la liste de mariage | Contribuer au voyage de noces.
+M O C * | Cadeau de départ à la retraite | Un objet lié à sa nouvelle passion.
+S O C co | Carte collective et petit cadeau de pot de départ | De la part de toute l'équipe.
+M O C * | Coffret pour un nouveau diplômé | Stylo de qualité et agenda.
+S O C * | Kit de survie pour premier appartement | Ustensiles et petites douceurs.
+M E C * | Repas de fête pour un succès | Célébrer ensemble une belle réussite.
+
+@ *
+S O * co | Mug original pour le bureau | Pour la pause café.
+S O * co | Plante grasse en pot | Une touche de vert sur le bureau.
+S O * co | Boîte de thés assortis | Pour les pauses de l'après-midi.
+S O * co | Carnet et stylo élégants | Pour les réunions.
+S O * co | Gâteau maison à partager | Pour toute l'équipe.
+S O * co | Bougie parfumée | Un petit cadeau qui plaît toujours.
+S O * co | Jeu de cartes rapide | Pour la pause déjeuner.

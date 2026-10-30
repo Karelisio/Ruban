@@ -1,0 +1,61 @@
+@ tech
+M O * * | Chargeur sans fil design | Fini les câbles sur la table de chevet.
+S O * * | Batterie externe compacte | Ne plus jamais tomber à court.
+L O * * | Liseuse ou tablette | Lire et regarder partout.
+M O * * | Écouteurs sans fil | Pour la musique et les appels.
+S O * * | Traceur d'objets Bluetooth | Ne plus perdre ses clés.
+M O * * | Enceinte connectée | Musique et radio dans la cuisine.
+S O * * | Coque de téléphone personnalisée | Avec une photo ou un motif.
+M O * * | Ampoules connectées | Une ambiance lumineuse à la voix.
+L O * * | Montre connectée | Notifications et santé au poignet.
+M O * * | Clavier mécanique | Une frappe agréable au quotidien.
+S O * * | Support de téléphone en bois | Pratique sur le bureau.
+M O * * | Cadre photo numérique | Les photos de famille défilent.
+
+@ teletravail
+M O * * | Lampe de bureau réglable | Une bonne lumière pour travailler.
+S O * * | Tapis de souris XXL en feutre | Doux et élégant sur le bureau.
+M O * * | Support d'ordinateur ergonomique | Le dos dira merci.
+S O * * | Mug isotherme | Le café reste chaud jusqu'à midi.
+M O * * | Casque pour visioconférences | Un son clair pour les réunions.
+S O * * | Plante de bureau peu exigeante | Un peu de vie sur le bureau.
+M O * * | Repose-pieds ergonomique | Pour une meilleure posture.
+S O * * | Organiseur de bureau en bois | Tout à portée de main.
+
+@ gaming_retro
+M O * * | Console rétro miniature | Les jeux de son enfance.
+S O * * | Cassette audio de compilation | Un clin d'œil aux années 80.
+M O * * | Appareil photo argentique vintage | La photo à l'ancienne.
+S O * * | Affiche de jeu vidéo rétro | Pour la déco geek.
+M O * * | Radio vintage Bluetooth | Le look d'avant, le son d'aujourd'hui.
+M O * * | Jeu de société des années 80 réédité | Retomber en enfance.
+
+@ collection
+S O * * | Présentoir pour collection | Mettre en valeur ses trouvailles.
+M O * * | Pièce rare pour sa collection | Le Graal du collectionneur.
+S O * * | Classeur de rangement | Pour timbres, cartes ou pièces.
+M E * * | Visite d'une brocante ou d'un salon spécialisé | Chiner ensemble.
+S O * * | Loupe éclairante | Pour examiner les détails.
+
+@ animaux
+S O * * | Jouet pour son animal | Pour faire plaisir à son compagnon.
+M O * * | Panier douillet pour chien ou chat | Le meilleur spot de sieste.
+M O * * | Portrait illustré de son animal | Une œuvre unique.
+S O * * | Médaille gravée pour collier | Avec le nom de l'animal.
+M E * * | Séance photo avec son animal | Des souvenirs à deux.
+M O * * | Mangeoire pour oiseaux | Un ballet d'oiseaux à la fenêtre.
+S O * * | Friandises artisanales pour animaux | Saines et gourmandes.
+M A * * | Abonnement box pour chien ou chat | Jouets et friandises chaque mois.
+M E * * | Parrainage d'un animal dans un refuge | Un geste qui compte.
+
+@ ecologie
+S O * * | Gourde en inox | Zéro bouteille plastique.
+S O * * | Kit zéro déchet salle de bain | Shampoing solide, brosse en bambou.
+M O * * | Lunch box en inox | Des repas sans plastique.
+S O * * | Bee wraps | Remplacer le film étirable.
+M O * * | Lombricomposteur | Recycler ses déchets en appartement.
+S O * * | Sacs à vrac en coton | Pour faire ses courses sans emballages.
+M E * * | Atelier fabrication de cosmétiques | Faire ses produits soi-même.
+M O * * | Brosses et éponges naturelles | Pour une maison au naturel.
+S E * * | Adoption d'une ruche ou d'un arbre | Un geste pour la planète.
+M O * * | Chargeur solaire | L'énergie du soleil partout.

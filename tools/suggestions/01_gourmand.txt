@@ -1,0 +1,96 @@
+@ cuisine
+M O * * | Couteau de chef forgé | Une lame qui change tout, à garder toute une vie.
+S O * * | Planche à découper en bois d'olivier | Belle sur la table comme en cuisine.
+M O * * | Cocotte en fonte émaillée mini | Pour les mijotés individuels et les desserts au four.
+S O * * | Épices du monde en coffret | Un tour du monde en dix petits pots.
+M E * * | Cours de cuisine thématique | Un atelier sushis, cuisine thaï ou pâtes fraîches.
+S O * * | Livre de recettes d'un chef aimé | Choisi selon ses cuisines préférées.
+L O * * | Robot pâtissier ou multicuiseur | Pour qui cuisine souvent et voit grand.
+S H * * | Carnet de recettes de famille | Les recettes de la famille, recopiées à la main.
+M O * * | Mortier et pilon en granit | Pour les pestos, currys et épices fraîches.
+M A * * | Box mensuelle d'épices rares | Chaque mois, de nouvelles saveurs à découvrir.
+S O * * | Tablier en lin brodé à son prénom | Un classique qui fait toujours plaisir.
+L O * * | Plancha de table | Pour les apéros dînatoires entre amis.
+M O * * | Machine à pâtes manuelle | Tagliatelles et raviolis maison.
+S O * * | Huile d'olive de petit producteur | Une bouteille d'exception pour assaisonner.
+P E * pa,fr | Dîner dans un restaurant étoilé | Un souvenir gastronomique à partager.
+S H X * | Bocal de mélange à cookies | Tous les ingrédients secs en couches, avec la recette.
+M O * * | Fumoir à cloche pour cocktails et plats | Une touche fumée spectaculaire à table.
+S O * * | Thermomètre de cuisson connecté | Fini les viandes trop cuites.
+
+@ patisserie
+S O * * | Moules en silicone de formes originales | Pour des gâteaux qui font sensation.
+M E * * | Atelier macarons ou entremets | Apprendre avec un pâtissier.
+S O * * | Douilles et poches professionnelles | Le kit pour des décors dignes d'une vitrine.
+M O * * | Balance de précision et thermomètre à sucre | Les outils des pâtissiers exigeants.
+S O * * | Livre de pâtisserie d'un grand chef | Des recettes pas à pas pour progresser.
+S O * * | Vanille de Madagascar en gousses | Un trésor parfumé pour les desserts.
+M O * * | Cercles et tapis de cuisson perforés | Pour des tartes impeccables.
+S H * * | Pâte à tartiner maison en bocal | Faite main, avec une jolie étiquette.
+M O * * | Plaque à pâtisserie en cuivre | Cuisson homogène et bel objet.
+
+@ gastronomie
+M O X,B * | Panier gourmand de produits régionaux | Terrines, confitures et douceurs de terroir.
+M O * * | Sélection de fromages affinés | Un plateau composé chez le fromager.
+L E * pa,fr,fa | Visite d'un domaine et dégustation | Une journée entre vignes et caves.
+S O * * | Sel de Guérande aux herbes | Un petit plaisir du quotidien.
+M O * * | Coffret de truffes et huile truffée | Pour sublimer pâtes et omelettes.
+L E * * | Marché gourmand en vélo guidé | Découvrir les produits d'une région.
+M O * * | Caviar d'aubergine et tapenades artisanales | L'apéro parfait, tout prêt.
+S O * * | Miel de lavande d'un apiculteur local | Doux, parfumé et local.
+M A * * | Abonnement à un panier de producteurs | Fruits et légumes de saison livrés.
+
+@ vin
+M O * * | Bouteille d'un millésime de son année de naissance | Un clin d'œil qui touche.
+S O * * | Tire-bouchon sommelier | L'outil élégant des amateurs.
+M O * * | Carafe à décanter | Pour laisser respirer les grands vins.
+L E * * | Cours d'œnologie | Apprendre à déguster et à reconnaître les cépages.
+M O * * | Coffret de trois vins nature | Une découverte de vignerons indépendants.
+S O * * | Carnet de dégustation | Pour noter les vins qui ont plu.
+L O * * | Mini cave à vin | Pour garder ses bouteilles à bonne température.
+M O * * | Verres à vin soufflés bouche | Une belle table commence par de beaux verres.
+M A * * | Abonnement à une box de vins | Chaque mois, une région viticole.
+
+@ biere
+S O * * | Assortiment de bières artisanales locales | Une dégustation de brasseries du coin.
+M E * * | Atelier brassage de bière | Fabriquer sa propre bière en une journée.
+M O * * | Kit de brassage maison | Pour brasser chez soi, étape par étape.
+S O * * | Verres à bière de dégustation | Le bon verre pour chaque style.
+M E * fr,si,pa | Visite d'une brasserie avec dégustation | Découvrir les coulisses et goûter.
+M A * * | Abonnement à une box de bières | Des brasseries indépendantes chaque mois.
+
+@ cocktails
+M O * * | Kit de mixologie | Shaker, cuillère, passoire et jigger.
+S O * * | Livre de cocktails classiques | Les grands classiques expliqués.
+M E * * | Cours de mixologie | Apprendre à créer ses cocktails.
+S O * * | Sirops artisanaux | Pour des cocktails maison avec ou sans alcool.
+M O * * | Coffret de gins de petites distilleries | Un tour des botaniques.
+S O * * | Moules à glaçons géants | Le détail qui fait pro.
+S O * * | Verres à cocktail vintage chinés | Chacun différent, tous élégants.
+
+@ cafe
+M O * * | Moulin à café manuel | Moudre juste avant de préparer.
+S O * * | Café de spécialité en grains | Torréfié récemment, origine unique.
+M O * * | Cafetière à piston ou dripper | Pour une extraction douce et aromatique.
+L E * * | Atelier barista latte art | Apprendre à dessiner dans la mousse.
+S O * * | Tasse en céramique artisanale | Faite à la main, unique.
+M A * * | Abonnement café de torréfacteur | Un nouveau café chaque mois.
+M O * * | Bouilloire à col de cygne | Le versement précis des amateurs.
+L O * * | Machine expresso à levier | Pour les passionnés de l'expresso parfait.
+
+@ the
+S O * * | Coffret de thés grands crus | Verts, noirs et oolongs à découvrir.
+M O * * | Théière en fonte japonaise | Garde le thé chaud et dure toujours.
+S O * * | Infuseur original | Un petit objet rigolo pour le quotidien.
+M E * * | Cérémonie du thé japonaise | Un moment de calme et de découverte.
+M A * * | Abonnement thé du mois | Des thés rares livrés chaque mois.
+S O * * | Kit matcha avec fouet en bambou | Le rituel complet du matcha.
+S H * * | Mélange de tisane maison | Plantes séchées du jardin, en sachets.
+
+@ chocolat
+S O * * | Tablettes de chocolat grand cru | Une dégustation d'origines.
+M E * * | Atelier chocolatier | Fabriquer ses propres bonbons de chocolat.
+M O X,V,B * | Coffret de pralinés d'un artisan | Le classique qui fait toujours plaisir.
+S H * * | Truffes maison en boîte | Faites main, emballées avec soin.
+M O * * | Fontaine à chocolat | Pour des desserts fondants à partager.
+M A * * | Abonnement chocolat | Des tablettes de chocolatiers indépendants.

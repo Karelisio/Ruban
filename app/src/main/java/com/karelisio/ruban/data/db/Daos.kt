@@ -182,6 +182,7 @@ interface SuggestionDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE) suspend fun setVerdict(verdict: SuggestionVerdict)
     @Query("DELETE FROM suggestion_verdicts WHERE personId = :personId AND kept = 0") suspend fun resetSkipped(personId: Long)
+    @Query("DELETE FROM suggestion_verdicts WHERE personId = :personId AND suggestionId = :suggestionId") suspend fun deleteVerdict(personId: Long, suggestionId: String)
 
     @Query("SELECT * FROM suggestion_verdicts") suspend fun allVerdicts(): List<SuggestionVerdict>
     @Insert(onConflict = OnConflictStrategy.REPLACE) suspend fun insertVerdicts(items: List<SuggestionVerdict>)

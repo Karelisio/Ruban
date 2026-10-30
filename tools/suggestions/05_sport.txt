@@ -1,0 +1,118 @@
+@ sport
+M O * * | Montre de sport connectée | Suivre ses entraînements et son sommeil.
+S O * * | Gourde isotherme | Garde l'eau fraîche toute la journée.
+M O * * | Sac de sport stylé | Pour aller à la salle avec style.
+M E * * | Cours d'essai d'un nouveau sport | Escalade, boxe ou paddle.
+S O * * | Bandes élastiques de musculation | S'entraîner à la maison.
+M O * * | Pistolet de massage | Récupérer après l'effort.
+M E * * | Séances avec un coach sportif | Un programme sur mesure.
+M A * * | Abonnement à une salle d'escalade | Grimper toute l'année.
+S O * * | Corde à sauter lestée | Le cardio partout.
+L O * * | Kettlebells et tapis | Une salle de sport à domicile.
+M E * * | Match de sport en tribune | Vivre l'ambiance du stade.
+
+@ running
+M O * * | Chaussures de running | Les bonnes chaussures changent tout.
+S O * * | Ceinture porte-gourde | Pour les sorties longues.
+M O * * | Écouteurs sport sans fil | Qui tiennent bien pendant l'effort.
+M E * * | Inscription à une course | Un 10 km, un trail ou un semi.
+S O * * | Lampe frontale de course | Courir en sécurité l'hiver.
+M O * * | Veste de running imperméable | Pour courir par tous les temps.
+
+@ velo
+M O * * | Casque de vélo design | Sécurité et style.
+S O * * | Éclairages vélo rechargeables | Voir et être vu.
+M O * * | Sacoche de vélo | Pour le vélotaf ou les balades.
+M E * * | Location de vélo électrique pour une balade | Une journée sur une voie verte.
+S O * * | Multi-outil vélo | Pour réparer sur la route.
+L O * * | Compteur GPS | Suivre ses parcours.
+M E * * | Révision complète du vélo | Un vélo comme neuf.
+
+@ randonnee
+M O * * | Sac à dos de randonnée | Confortable pour la journée.
+S O * * | Guide des sentiers de la région | De nouveaux itinéraires à explorer.
+M O * * | Bâtons de marche | Moins de fatigue en montée.
+S O * * | Chaussettes techniques de rando | Fini les ampoules.
+M O * * | Jumelles compactes | Observer les oiseaux et paysages.
+M E * * | Randonnée guidée avec un naturaliste | Découvrir la faune et la flore.
+L O * * | Chaussures de randonnée | Pour partir loin, en confort.
+S O * * | Popote et réchaud léger | Un café chaud au sommet.
+
+@ montagne
+M E * * | Journée de raquettes avec un guide | Découvrir la montagne en hiver.
+L E * * | Cours de ski ou de snowboard | Progresser sur les pistes.
+M O * * | Masque de ski | Une bonne vision par tous les temps.
+M O * * | Gants de ski chauds | Les mains au chaud toute la journée.
+P E * pa,fa | Week-end dans un chalet | Feu de cheminée et neige.
+M E * * | Via ferrata accompagnée | Les sensations de l'escalade en sécurité.
+
+@ mer
+M E * * | Baptême de plongée | Découvrir le monde sous-marin.
+M E * * | Initiation au surf ou au paddle | Glisser sur les vagues.
+S O * * | Serviette de plage en lin | Légère et sèche vite.
+M O * * | Masque et tuba de qualité | Observer les poissons.
+L E * * | Sortie en voilier | Une journée au large.
+S O * * | Sac étanche | Garder ses affaires au sec.
+
+@ camping
+M O * * | Hamac de voyage | Une sieste partout.
+S O * * | Lanterne solaire | Lumière douce sous la tente.
+L O * * | Tente légère | Pour les nuits à la belle étoile.
+M O * * | Sac de couchage confortable | Bien dormir dehors.
+M E * pa,fa,fr | Nuit insolite en cabane | Dormir dans les arbres.
+S O * * | Couteau pliant | L'outil du campeur.
+
+@ voyage
+M O * * | Valise cabine légère | Pour les escapades du week-end.
+S O * * | Étiquettes de bagage en cuir | Retrouver sa valise facilement.
+S O * * | Guide de voyage d'une destination rêvée | Pour commencer à rêver.
+M O * * | Carte du monde à gratter | Révéler les pays visités.
+S O * * | Adaptateur universel | Pour tous les pays.
+M O * * | Coussin de voyage en mousse | Dormir en avion.
+P E * pa | Week-end surprise | Une destination mystère.
+M O * * | Trousse de voyage organisée | Tout à sa place.
+S H * * | Carnet de voyage illustré | Pour raconter ses aventures.
+L E * * | Vol en montgolfière | Le monde vu d'en haut.
+M E * * | Nuit dans un hôtel insolite | Une bulle, une yourte ou un phare.
+
+@ football
+M O * * | Maillot de son équipe | Floqué à son nom.
+M E * * | Places pour un match | Vivre l'ambiance du stade.
+S O * * | Ballon officiel | Pour les matchs du dimanche.
+S O * * | Écharpe de supporter | Les couleurs du club.
+M O * * | Livre sur l'histoire du club | Les grandes heures du foot.
+
+@ tennis
+M O * * | Raquette adaptée à son niveau | Pour progresser.
+S O * * | Tube de balles et surgrips | Les consommables toujours utiles.
+M E * * | Stage de tennis ou padel | Perfectionner son jeu.
+M O * * | Sac de raquettes | Tout emporter sur le court.
+
+@ golf
+M O * * | Balles personnalisées | Avec ses initiales.
+M E * * | Green fee dans un beau parcours | Une journée de golf.
+M E * * | Cours avec un pro | Corriger son swing.
+S O * * | Gant de golf | Une meilleure prise.
+L O * * | Télémètre de golf | Connaître les distances au mètre près.
+
+@ peche
+M O * * | Coffret de leurres | Pour varier les techniques.
+M E * * | Journée de pêche guidée | Découvrir de nouveaux coins.
+S O * * | Carnet de pêche | Noter ses prises et ses spots.
+L O * * | Canne à pêche de qualité | Légère et sensible.
+S O * * | Chapeau de pêcheur | Le style au bord de l'eau.
+
+@ danse
+M E * * | Cours de danse en couple | Salsa, tango ou rock.
+M E * * | Stage de danse d'un week-end | Apprendre un nouveau style.
+M O * * | Chaussures de danse | Glisser avec élégance.
+M E * * | Spectacle de danse | Une soirée de grâce.
+
+@ auto
+M E * * | Stage de pilotage sur circuit | Des sensations fortes.
+S O * * | Kit d'entretien auto | Pour une voiture impeccable.
+M O * * | Maquette de voiture mythique | Un modèle à collectionner.
+M E * * | Visite d'un musée de l'automobile | Les belles mécaniques d'antan.
+M O * * | Gants de conduite en cuir | Le style vintage.
+L O * * | Caméra embarquée | Pour la sécurité sur la route.
+S O * * | Livre sur les voitures de légende | Pour les passionnés.
