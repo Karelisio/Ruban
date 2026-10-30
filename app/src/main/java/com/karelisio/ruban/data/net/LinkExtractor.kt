@@ -21,8 +21,6 @@ import org.jsoup.nodes.Document
  */
 class LinkExtractor(private val http: OkHttpClient, private val photos: PhotoStore) {
 
-    private val json = Json { ignoreUnknownKeys = true; isLenient = true }
-
     suspend fun fetch(url: String): LinkPreview? = withContext(Dispatchers.IO) {
         runCatching {
             val request = Request.Builder()
@@ -40,7 +38,7 @@ class LinkExtractor(private val http: OkHttpClient, private val photos: PhotoSto
                     src.buffer.clone().readUtf8()
                 }
                 val doc = Jsoup.parse(body, response.request.url.toString())
-                if (looksBlocked(doc)) null else parse(doc)
+                if (PageParser.looksBlocked(doc)) null else PageParser.parse(doc)
             }
         }.getOrNull()
     }
@@ -61,7 +59,19 @@ class LinkExtractor(private val http: OkHttpClient, private val photos: PhotoSto
         }.getOrNull()?.let { photos.importBytes(it) }
     }
 
-    private fun looksBlocked(doc: Document): Boolean {
+    companion object {
+        const val USER_AGENT =
+            "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36"
+        private const val MAX_BYTES = 3L * 1024 * 1024
+        private const val MAX_IMAGE_BYTES = 10L * 1024 * 1024
+    }
+}
+
+/** Pure HTML → [LinkPreview] parsing (Open Graph, JSON-LD Product, microdata). */
+object PageParser {
+    private val json = Json { ignoreUnknownKeys = true; isLenient = true }
+
+    fun looksBlocked(doc: Document): Boolean {
         val title = doc.title().lowercase()
         return listOf("captcha", "robot", "access denied", "attention required", "just a moment", "accès refusé", "are you human")
             .any { title.contains(it) }
@@ -143,12 +153,5 @@ class LinkExtractor(private val http: OkHttpClient, private val photos: PhotoSto
         is JsonPrimitive -> e.contentOrNull
         is JsonArray -> e.firstNotNullOfOrNull(::firstImage)
         is JsonObject -> e.str("url") ?: e.str("contentUrl")
-    }
-
-    companion object {
-        const val USER_AGENT =
-            "Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36"
-        private const val MAX_BYTES = 3L * 1024 * 1024
-        private const val MAX_IMAGE_BYTES = 10L * 1024 * 1024
     }
 }
