@@ -21,6 +21,7 @@ import com.karelisio.ruban.data.repo.PriceTracker
 import com.karelisio.ruban.data.repo.ReceivedRepository
 import com.karelisio.ruban.data.repo.SuggestionRepository
 import com.karelisio.ruban.data.settings.SettingsRepository
+import com.karelisio.ruban.data.update.UpdateManager
 import com.karelisio.ruban.notify.Notifications
 import com.karelisio.ruban.notify.ReminderScheduler
 import com.karelisio.ruban.widget.WidgetUpdater
@@ -62,6 +63,7 @@ class AppContainer(val context: Context) {
     val suggestions by lazy { SuggestionRepository(context, db, settings) }
     val prices by lazy { PriceTracker(db, links) }
     val backup by lazy { BackupManager(context, this) }
+    val updates by lazy { UpdateManager(context, http, settings) }
 }
 
 class RubanApp : Application() {

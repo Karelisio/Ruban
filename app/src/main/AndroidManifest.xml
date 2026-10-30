@@ -86,6 +86,10 @@
         </receiver>
 
         <receiver
+            android:name=".data.update.InstallReceiver"
+            android:exported="false" />
+
+        <receiver
             android:name=".widget.NextEventWidgetReceiver"
             android:exported="true"
             android:label="Ruban · Prochain événement">

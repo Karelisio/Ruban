@@ -51,3 +51,12 @@ class PageParserTest {
         assertEquals("https://a.fr/x?y=1", LinkPreview.findUrl("Regarde ça https://a.fr/x?y=1, top !"))
     }
 }
+
+class VersionsTest {
+    @Test fun compare() {
+        assertTrue(com.karelisio.ruban.data.update.Versions.isNewer("1.2.10", "1.2.9"))
+        assertTrue(com.karelisio.ruban.data.update.Versions.isNewer("0.1.0", "0.1.0-dev"))
+        assertTrue(!com.karelisio.ruban.data.update.Versions.isNewer("1.0.0", "1.0.0"))
+        assertTrue(!com.karelisio.ruban.data.update.Versions.isNewer("1.0.0", "1.1.0"))
+    }
+}

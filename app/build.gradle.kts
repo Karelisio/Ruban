@@ -21,7 +21,7 @@ android {
         versionCode = ciVersionCode
         versionName = ciVersionName
         // Repository queried for in-app updates (public releases).
-        buildConfigField("String", "UPDATE_REPO", "\"${System.getenv("RUBAN_UPDATE_REPO") ?: "karelisio/ruban-releases"}\"")
+        buildConfigField("String", "UPDATE_REPO", "\"${System.getenv("RUBAN_UPDATE_REPO") ?: "Karelisio/Ruban"}\"")
     }
 
     signingConfigs {

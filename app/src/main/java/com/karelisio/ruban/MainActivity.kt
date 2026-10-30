@@ -28,6 +28,7 @@ import com.karelisio.ruban.ui.nav.RubanNavHost
 import com.karelisio.ruban.ui.security.Biometric
 import com.karelisio.ruban.ui.security.LockScreen
 import com.karelisio.ruban.ui.theme.RubanTheme
+import com.karelisio.ruban.ui.update.UpdateSheetHost
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
@@ -84,6 +85,10 @@ class MainActivity : FragmentActivity() {
                     val nav = rememberNavController()
                     val start: Route = remember { if (current.onboardingDone) Route.Home() else Route.Onboarding }
                     RubanNavHost(nav, start)
+                    if (current.onboardingDone) {
+                        UpdateSheetHost()
+                        LaunchedEffect(Unit) { container.updates.check() }
+                    }
                     if (isLocked) {
                         LockScreen(onUnlock = ::unlock)
                         LaunchedEffect(Unit) { unlock() }
