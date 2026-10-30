@@ -36,6 +36,8 @@ data class Settings(
     val suggestionsVersion: Int = 0,
     val holidaysSeeded: Boolean = false,
     val currency: String = "EUR",
+    val lastReminderAt: Long = 0,
+    val lastPriceCheckAt: Long = 0,
 )
 
 class SettingsRepository(private val context: Context) {
@@ -59,6 +61,8 @@ class SettingsRepository(private val context: Context) {
         val suggestionsVersion = intPreferencesKey("suggestions_version")
         val holidaysSeeded = booleanPreferencesKey("holidays_seeded")
         val currency = stringPreferencesKey("currency")
+        val lastReminderAt = longPreferencesKey("last_reminder_at")
+        val lastPriceCheckAt = longPreferencesKey("last_price_check_at")
     }
 
     val settings: Flow<Settings> = context.dataStore.data.map { p ->
@@ -81,6 +85,8 @@ class SettingsRepository(private val context: Context) {
             suggestionsVersion = p[Keys.suggestionsVersion] ?: 0,
             holidaysSeeded = p[Keys.holidaysSeeded] ?: false,
             currency = p[Keys.currency] ?: "EUR",
+            lastReminderAt = p[Keys.lastReminderAt] ?: 0,
+            lastPriceCheckAt = p[Keys.lastPriceCheckAt] ?: 0,
         )
     }
 
@@ -114,4 +120,6 @@ class SettingsRepository(private val context: Context) {
     suspend fun setSuggestionsVersion(value: Int) = edit { it[Keys.suggestionsVersion] = value }
     suspend fun setHolidaysSeeded(value: Boolean) = edit { it[Keys.holidaysSeeded] = value }
     suspend fun setCurrency(value: String) = edit { it[Keys.currency] = value }
+    suspend fun setLastReminderAt(value: Long) = edit { it[Keys.lastReminderAt] = value }
+    suspend fun setLastPriceCheckAt(value: Long) = edit { it[Keys.lastPriceCheckAt] = value }
 }

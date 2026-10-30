@@ -38,7 +38,7 @@ object IntentRouter {
     suspend fun route(context: Context, intent: Intent?): Route? {
         intent ?: return null
         return when (intent.action) {
-            ACTION_NEW_IDEA -> Route.IdeaEdit(startWith = intent.getStringExtra(EXTRA_START))
+            ACTION_NEW_IDEA -> Route.IdeaEdit(startWith = intent.getStringExtra(EXTRA_START), eventId = intent.getLongExtra(EXTRA_EVENT_ID, 0))
             ACTION_OPEN -> when {
                 intent.hasExtra(EXTRA_IDEA_ID) -> Route.IdeaDetail(intent.getLongExtra(EXTRA_IDEA_ID, 0))
                 intent.hasExtra(EXTRA_EVENT_ID) -> Route.EventDetail(intent.getLongExtra(EXTRA_EVENT_ID, 0))

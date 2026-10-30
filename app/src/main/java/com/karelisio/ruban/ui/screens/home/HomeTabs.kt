@@ -162,9 +162,5 @@ private fun NewIdeaFabMenu() {
 }
 
 @Composable
-internal fun EventsTab(padding: PaddingValues) =
-    EmptyState("📅", "Rien à l'horizon", "Les anniversaires et fêtes apparaîtront ici.", Modifier.padding(padding))
-
-@Composable
 internal fun BudgetTab(padding: PaddingValues) =
     EmptyState("🪙", "Budget", "Suis ce que tu prévois et ce que tu dépenses.", Modifier.padding(padding))

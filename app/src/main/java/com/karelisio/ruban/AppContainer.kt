@@ -18,10 +18,19 @@ import com.karelisio.ruban.data.repo.PersonRepository
 import com.karelisio.ruban.data.repo.PhotoStore
 import com.karelisio.ruban.data.repo.ReceivedRepository
 import com.karelisio.ruban.data.settings.SettingsRepository
+import com.karelisio.ruban.notify.Notifications
+import com.karelisio.ruban.notify.ReminderScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.debounce
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
 
@@ -44,6 +53,7 @@ class AppContainer(val context: Context) {
             .build()
     }
     val links by lazy { LinkExtractor(http, photos) }
+    val reminders by lazy { ReminderScheduler(context, this) }
 }
 
 class RubanApp : Application() {
@@ -53,6 +63,7 @@ class RubanApp : Application() {
     override fun onCreate() {
         super.onCreate()
         container = AppContainer(this)
+        Notifications.createChannels(this)
         container.scope.launch {
             val settings = container.settings.current()
             if (!settings.holidaysSeeded) {
@@ -60,6 +71,21 @@ class RubanApp : Application() {
                 container.settings.setHolidaysSeeded(true)
             }
         }
+        observeReminderInputs()
+    }
+
+    /** Any change to events, people or reminder settings reschedules the next alarm. */
+    @OptIn(FlowPreview::class)
+    private fun observeReminderInputs() {
+        val c = container
+        combine(
+            c.events.observeAll(),
+            c.persons.observeAll(),
+            c.settings.settings.map { Triple(it.reminderOffsets, it.reminderHour, it.reminderMinute) }.distinctUntilChanged(),
+        ) { _, _, _ -> Unit }
+            .debounce(800)
+            .onEach { c.reminders.reschedule() }
+            .launchIn(c.scope)
     }
 }
 

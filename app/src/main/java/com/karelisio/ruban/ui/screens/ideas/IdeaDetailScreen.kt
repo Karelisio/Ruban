@@ -23,7 +23,7 @@ import androidx.compose.material.icons.automirrored.rounded.OpenInNew
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Edit
 import androidx.compose.material.icons.rounded.MoreVert
-import androidx.compose.material.icons.rounded.TrendingDown
+import androidx.compose.material.icons.automirrored.rounded.TrendingDown
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenu
@@ -324,7 +324,7 @@ private fun PriceCard(price: Long?, currency: String, history: List<PricePoint>,
                 Row(Modifier.fillMaxWidth().padding(top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
                     Text(Dates.fullMillis(history.first().checkedAt), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.weight(1f))
                     if (last < first) {
-                        Icon(Icons.Rounded.TrendingDown, null, tint = MaterialTheme.colorScheme.tertiary, modifier = Modifier.size(16.dp))
+                        Icon(Icons.AutoMirrored.Rounded.TrendingDown, null, tint = MaterialTheme.colorScheme.tertiary, modifier = Modifier.size(16.dp))
                         Text(" −${Money.format(first - last, currency)}", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.tertiary)
                     }
                 }
