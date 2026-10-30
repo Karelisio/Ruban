@@ -160,7 +160,3 @@ private fun NewIdeaFabMenu() {
         FloatingActionButtonMenuItem(onClick = { go(CaptureStart.GALLERY) }, icon = { Icon(Icons.Rounded.PhotoLibrary, null) }, text = { Text("Galerie") })
     }
 }
-
-@Composable
-internal fun BudgetTab(padding: PaddingValues) =
-    EmptyState("🪙", "Budget", "Suis ce que tu prévois et ce que tu dépenses.", Modifier.padding(padding))

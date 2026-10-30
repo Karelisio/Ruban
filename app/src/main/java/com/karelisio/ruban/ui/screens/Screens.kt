@@ -17,6 +17,7 @@ import com.karelisio.ruban.ui.components.EmptyState
 import com.karelisio.ruban.ui.nav.LocalNav
 import com.karelisio.ruban.ui.nav.Route
 import com.karelisio.ruban.ui.nav.screen
+import com.karelisio.ruban.ui.screens.budget.YearRecapScreen
 import com.karelisio.ruban.ui.screens.events.EventDetailScreen
 import com.karelisio.ruban.ui.screens.events.EventEditScreen
 import com.karelisio.ruban.ui.screens.home.HomeScreen
@@ -36,7 +37,7 @@ object Screens {
         screen<Route.IdeaEdit> { IdeaEditScreen() }
         screen<Route.EventDetail> { EventDetailScreen() }
         screen<Route.EventEdit> { EventEditScreen() }
-        screen<Route.YearRecap> { Placeholder("Récap") }
+        screen<Route.YearRecap> { YearRecapScreen() }
         screen<Route.Inspire> { Placeholder("Inspire-moi") }
         screen<Route.Received> { Placeholder("Cadeaux reçus") }
         screen<Route.ReceivedEdit> { Placeholder("Cadeau reçu") }
