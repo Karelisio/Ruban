@@ -23,6 +23,7 @@ import com.karelisio.ruban.data.repo.SuggestionRepository
 import com.karelisio.ruban.data.settings.SettingsRepository
 import com.karelisio.ruban.notify.Notifications
 import com.karelisio.ruban.notify.ReminderScheduler
+import com.karelisio.ruban.widget.WidgetUpdater
 import com.karelisio.ruban.work.WorkScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -94,6 +95,11 @@ class RubanApp : Application() {
         ) { _, _, _ -> Unit }
             .debounce(800)
             .onEach { c.reminders.reschedule() }
+            .launchIn(c.scope)
+        // Widgets follow every change that affects the next event and its state.
+        combine(c.events.observeAll(), c.persons.observeAll(), c.ideas.observeAll()) { _, _, _ -> Unit }
+            .debounce(1_500)
+            .onEach { WidgetUpdater.refresh(this) }
             .launchIn(c.scope)
     }
 }

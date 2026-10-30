@@ -16,6 +16,7 @@ import com.karelisio.ruban.container
 import com.karelisio.ruban.data.model.Idea
 import com.karelisio.ruban.notify.Notifications
 import com.karelisio.ruban.util.Money
+import com.karelisio.ruban.widget.WidgetUpdater
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
 
@@ -111,6 +112,7 @@ class HousekeepingWorker(context: Context, params: WorkerParameters) : Coroutine
     override suspend fun doWork(): Result {
         val c = applicationContext.container
         c.reminders.fire()
+        WidgetUpdater.refresh(applicationContext)
         return Result.success()
     }
 }
