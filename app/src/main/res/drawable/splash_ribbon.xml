@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector android:width="108dp" android:height="108dp"
+            android:viewportWidth="108" android:viewportHeight="108">
+            <group android:name="bow" android:pivotX="54" android:pivotY="54">
+                <path android:name="ribbon"
+                    android:pathData="M40,79 C45,70 50,62 54,54 C46,44 33,32 26.5,39.5 C20.5,46.5 30,58.5 54,54 C78,58.5 87.5,46.5 81.5,39.5 C75,32 62,44 54,54 C58,62 63,70 68,79"
+                    android:strokeColor="@color/splash_ribbon" android:strokeWidth="8"
+                    android:strokeLineCap="round" android:strokeLineJoin="round"
+                    android:trimPathEnd="0" />
+                <group android:name="knot" android:pivotX="54" android:pivotY="54"
+                    android:scaleX="0" android:scaleY="0">
+                    <path
+                        android:pathData="M54,47.5 C58.2,47.5 60.5,50 60.5,54 C60.5,58 58.2,60.5 54,60.5 C49.8,60.5 47.5,58 47.5,54 C47.5,50 49.8,47.5 54,47.5 Z"
+                        android:fillColor="@color/splash_knot" />
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="ribbon">
+        <aapt:attr name="android:animation">
+            <objectAnimator android:propertyName="trimPathEnd" android:duration="650"
+                android:valueFrom="0" android:valueTo="1" android:valueType="floatType"
+                android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </aapt:attr>
+    </target>
+    <target android:name="knot">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator android:propertyName="scaleX" android:startOffset="520" android:duration="420"
+                    android:valueFrom="0" android:valueTo="1" android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator" />
+                <objectAnimator android:propertyName="scaleY" android:startOffset="520" android:duration="420"
+                    android:valueFrom="0" android:valueTo="1" android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="bow">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator android:propertyName="scaleX" android:startOffset="560" android:duration="460"
+                    android:valueFrom="0.92" android:valueTo="1" android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator" />
+                <objectAnimator android:propertyName="scaleY" android:startOffset="560" android:duration="460"
+                    android:valueFrom="0.92" android:valueTo="1" android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

@@ -1,0 +1,26 @@
+# Gradle / Android Studio
+.gradle/
+build/
+/captures
+.externalNativeBuild/
+.cxx/
+local.properties
+*.iml
+.idea/
+.kotlin/
+.DS_Store
+
+# Secrets — never commit
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+*.p12
+*.pem
+google-services.json
+
+# Outputs
+*.apk
+*.aab
+*.ap_
+*.dex

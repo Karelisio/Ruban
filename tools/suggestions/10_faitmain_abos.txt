@@ -1,0 +1,42 @@
+@ *
+S H * * | Confitures maison assorties | Des fruits de saison en pots.
+S H * * | Bougie coulée à la main | Avec sa senteur préférée.
+S H * * | Carnet relié à la main | Couverture en tissu choisi pour lui ou elle.
+S H * * | Granola maison | Un petit-déjeuner gourmand en bocal.
+S H * * | Savons faits maison | Doux et parfumés.
+S H * * | Illustration ou portrait dessiné | Un dessin rien que pour lui ou elle.
+S H * * | Pot de fleurs peint à la main | Unique et coloré.
+S H * * | Bracelet tressé | Simple et symbolique.
+S H * * | Coussin brodé | Avec un motif ou une citation.
+S H * * | Pâte à sel ou céramique faite maison | Un petit objet déco.
+S H * * | Vidéo de messages de proches | Tout le monde réuni dans un film.
+S H * * | Recueil de poèmes écrits pour lui ou elle | Des mots rien qu'à lui ou elle.
+S H * * | Herbier personnalisé | Des fleurs séchées d'un lieu cher.
+S H * * | Bons cadeaux faits main | Des promesses à utiliser quand on veut.
+S H * * | Huile aromatisée maison | Ail, piment ou romarin.
+S H * * | Bocal à cookies décoré | Rempli de biscuits maison.
+S H * * | Mixtape sur clé USB décorée | Une sélection musicale personnelle.
+S H * * | Porte-clés en cuir cousu main | Un petit objet durable.
+S H * * | Tote bag peint ou brodé | Pratique et personnel.
+S H * * | Livre de recettes illustré pour lui ou elle | Ses plats préférés réunis.
+S H * * | Calendrier perpétuel des anniversaires | Pour ne jamais oublier.
+S H * * | Macramé mural | Une déco bohème faite main.
+S H * * | Sirop maison de fleurs ou de fruits | Sureau, menthe ou fraise.
+S H * * | Pain d'épices maison | Parfumé et moelleux.
+
+@ *
+M A * * | Abonnement à un magazine sur sa passion | De la lecture chaque mois.
+M A * * | Abonnement à une plateforme de streaming | Des films et séries à volonté.
+M A * * | Box de fleurs fraîches | Un bouquet livré régulièrement.
+M A * * | Abonnement à des cours en ligne | Apprendre une nouvelle compétence.
+M A * * | Box de jeux de société | Un nouveau jeu chaque mois.
+M A * * | Abonnement à un journal | Rester informé avec du recul.
+M A * * | Box de chaussettes | Des motifs originaux chaque mois.
+M A * * | Box de loisirs créatifs | Un projet DIY chaque mois.
+M A * * | Box de snacks du monde | Des saveurs étrangères à découvrir.
+M A * * | Abonnement à une box bien-être | Des produits pour prendre soin de soi.
+M A * ch | Box d'activités pour enfants | Un projet créatif chaque mois.
+M A * * | Abonnement à un club de lecture | Des livres et des échanges.
+M A * * | Abonnement à un podcast premium | Des épisodes exclusifs.
+M A * * | Abonnement à une box de fromages | Des fromages affinés chaque mois.
+M A * * | Abonnement à une cave de bières | Une sélection de brasseries.

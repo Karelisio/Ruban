@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_idea"
+        android:shortcutId="new_idea"
+        android:shortcutShortLabel="@string/new_idea">
+        <intent
+            android:action="com.karelisio.ruban.action.NEW_IDEA"
+            android:targetClass="com.karelisio.ruban.MainActivity"
+            android:targetPackage="com.karelisio.ruban" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_voice"
+        android:shortcutId="dictate_idea"
+        android:shortcutShortLabel="@string/dictate_idea">
+        <intent
+            android:action="com.karelisio.ruban.action.NEW_IDEA"
+            android:targetClass="com.karelisio.ruban.MainActivity"
+            android:targetPackage="com.karelisio.ruban">
+            <extra android:name="start" android:value="voice" />
+        </intent>
+    </shortcut>
+</shortcuts>

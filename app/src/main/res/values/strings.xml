@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ruban</string>
+    <string name="share_label">Idée Ruban</string>
+    <string name="new_idea">Nouvelle idée</string>
+    <string name="dictate_idea">Dicter une idée</string>
+    <string name="widget_next_event_desc">Prochain événement et compte à rebours</string>
+    <string name="widget_new_idea_desc">Noter une idée en un geste</string>
+    <string name="tile_label">Nouvelle idée</string>
+</resources>

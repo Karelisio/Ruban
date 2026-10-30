@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#FFFFF8F8</color>
+    <color name="splash_ribbon">#FF9E2A4F</color>
+    <color name="splash_knot">#FFD9A21B</color>
+    <color name="window_background">#FFFFF8F8</color>
+    <color name="shortcut_background">#FFFFD9E1</color>
+</resources>

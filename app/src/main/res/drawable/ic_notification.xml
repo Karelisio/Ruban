@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Monochrome ribbon bow for the status bar. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp" android:height="24dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path
+        android:pathData="M30,92 C38,78 46,66 54,54 C40,38 18,20 9,32 C1,43 18,62 54,54 C90,62 107,43 99,32 C90,20 68,38 54,54 C62,66 70,78 78,92"
+        android:strokeColor="#FFFFFFFF" android:strokeWidth="12"
+        android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path
+        android:pathData="M54,44 a10,10 0 1,1 0,20 a10,10 0 1,1 0,-20 z"
+        android:fillColor="#FFFFFFFF" />
+</vector>

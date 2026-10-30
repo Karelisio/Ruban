@@ -1,0 +1,109 @@
+@ jeux_video
+M O * * | Jeu vidéo très attendu | Le titre qu'il ou elle attend depuis des mois.
+M O * * | Manette sans fil supplémentaire | Pour jouer à deux.
+S O * * | Carte cadeau de boutique de jeux | Pour choisir soi-même.
+M A * * | Abonnement à un service de jeux | Des dizaines de jeux à volonté.
+L O * * | Casque gaming confortable | Pour de longues sessions.
+M O * * | Lampe d'ambiance pour bureau gaming | Une ambiance colorée et réglable.
+S O * * | Artbook d'un jeu culte | Les coulisses artistiques d'un univers.
+
+@ jeux_societe
+M O * * | Jeu de société coopératif | Pour gagner ensemble, en famille ou entre amis.
+S O * * | Jeu d'ambiance pour soirées | Des fous rires garantis.
+M O * * | Jeu de stratégie expert | Pour les longues parties du dimanche.
+S O * * | Jeu de cartes de voyage | Compact, à emporter partout.
+M E * * | Soirée dans un bar à jeux | Des centaines de jeux à tester.
+M O * * | Escape game en boîte | Une énigme à résoudre à la maison.
+L O * * | Table de jeu ou plateau premium | Pour les passionnés.
+S O * * | Extension d'un jeu qu'il ou elle aime | De nouvelles règles pour un jeu favori.
+
+@ puzzles
+S O * * | Puzzle de 1000 pièces artistique | Une belle illustration à reconstituer.
+S O * * | Casse-tête en bois | Un défi pour les esprits agiles.
+M O * * | Puzzle 3D d'un monument | À construire puis exposer.
+S O * * | Livre d'énigmes et de logique | Des heures de réflexion.
+M O * * | Puzzle personnalisé avec une photo | Un souvenir à reconstituer.
+M E * * | Escape game en salle | Une heure pour s'échapper en équipe.
+
+@ lego
+M O * * | Set de construction d'architecture | Un monument célèbre en briques.
+L O * * | Grand set de collection | Le défi des week-ends pluvieux.
+M O * * | Set botanique en briques | Des fleurs qui ne fanent jamais.
+S O * * | Mini-figurines à collectionner | Surprise dans chaque sachet.
+M O * * | Maquette mécanique en bois | Des engrenages qui bougent vraiment.
+
+@ photo
+M O * * | Appareil photo instantané | Des souvenirs à coller tout de suite.
+S O * * | Films pour appareil instantané | Toujours bienvenus.
+M E * * | Stage de photographie | Apprendre à maîtriser la lumière.
+M O * * | Objectif macro pour smartphone | Les détails du monde en grand.
+M O * * | Livre photo de vos souvenirs | Une année en images.
+S O * * | Cadres photo assortis | Pour créer un mur de souvenirs.
+L O * * | Trépied et stabilisateur | Des photos et vidéos nettes.
+S H * pa,fa,gp | Album photo fait main | Avec annotations et petits mots.
+M O * * | Imprimante photo de poche | Imprimer ses photos en un instant.
+
+@ art
+M O * * | Coffret d'aquarelle de qualité | Des pigments lumineux pour se lancer.
+M E * * | Cours de peinture ou de dessin | Apprendre auprès d'un artiste.
+M E * * | Atelier céramique ou tournage | Créer ses propres bols.
+S O * * | Carnet de croquis épais | Pour dessiner partout.
+M O * * | Chevalet de table | Peindre confortablement.
+L O * * | Œuvre d'un artiste local | Une pièce unique pour la maison.
+M E * * | Exposition dans un grand musée | Une sortie inspirante.
+S O * * | Crayons de couleur professionnels | Des couleurs riches et durables.
+M O * * | Tablette graphique d'initiation | Pour dessiner sur ordinateur.
+
+@ couture
+M O * * | Kit de tricot avec laine douce | Un premier projet facile.
+S O * * | Pelotes de laine mérinos | Des couleurs choisies avec soin.
+M E * * | Atelier couture | Coudre son premier vêtement.
+S O * * | Kit de broderie moderne | Un motif contemporain à broder.
+L O * * | Machine à coudre | Pour se lancer dans la couture.
+S O * * | Ciseaux de couturière | Des ciseaux qui coupent vraiment.
+M O * * | Kit de macramé | Une suspension à réaliser soi-même.
+S H * * | Bonnet tricoté main | Chaud et fait avec amour.
+
+@ bricolage
+M O * * | Perceuse-visseuse sans fil | L'outil indispensable.
+S O * * | Mètre ruban et niveau de qualité | Les basiques bien choisis.
+M E * * | Atelier menuiserie | Fabriquer son premier meuble.
+M O * * | Coffret d'embouts et de forets | Pour tous les travaux.
+S O * * | Lampe frontale puissante | Les deux mains libres.
+M O * * | Établi pliant | Bricoler partout.
+S O * * | Couteau multifonction | Toujours utile, toujours dans la poche.
+L O * * | Ponceuse ou scie sauteuse | Pour les projets ambitieux.
+
+@ deco
+S O * * | Bougie parfumée artisanale | Une odeur qui réconforte.
+M O * * | Plaid en laine douce | Pour les soirées sur le canapé.
+M O * * | Vase en céramique artisanale | Pour un bouquet de saison.
+S O * * | Affiche d'illustrateur | Un mur qui prend des couleurs.
+M O * * | Lampe d'ambiance design | Une lumière douce le soir.
+S O * * | Diffuseur d'huiles essentielles | Une maison qui sent bon.
+M O * * | Coussins assortis | Un coup de frais pour le salon.
+M O * * | Miroir rond en rotin | Lumineux et chaleureux.
+S H * * | Couronne de fleurs séchées | Faite main pour décorer la porte.
+L O * * | Tapis berbère | Chaleur et caractère.
+
+@ jardinage
+S O * * | Graines de légumes anciens | Des variétés oubliées à cultiver.
+M O * * | Outils de jardin forgés | Des outils solides et beaux.
+S O * * | Gants de jardinage en cuir | Protéger ses mains en beauté.
+M O * * | Carré potager surélevé | Jardiner sans se baisser.
+M O * * | Composteur de balcon | Réduire ses déchets en ville.
+S O * * | Hôtel à insectes | Accueillir les pollinisateurs.
+M E * * | Atelier permaculture | Apprendre à cultiver durablement.
+M O * * | Arrosoir en zinc | L'objet qui fait plaisir au jardin.
+L O * * | Banc de jardin en bois | Pour profiter de son travail.
+S O * * | Nichoir à oiseaux | Un spectacle tout le printemps.
+
+@ plantes
+S O * * | Plante d'intérieur facile | Un peu de vert sans stress.
+M O * * | Grande plante tropicale | Pour transformer une pièce.
+S O * * | Cache-pot en céramique | Pour habiller une plante.
+M O * * | Kit de terrarium | Un petit jardin sous verre.
+M O * * | Jardin d'intérieur connecté | Des herbes aromatiques toute l'année.
+S O * * | Bouture rare emballée avec soin | Pour les collectionneurs de plantes.
+M A * * | Abonnement à une box de plantes | Une nouvelle plante chaque mois.
+M E * * | Atelier kokedama | Créer une boule de mousse végétale.

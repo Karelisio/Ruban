@@ -1,0 +1,61 @@
+@ mode
+M O * * | Écharpe en cachemire | Douce et intemporelle.
+M O * * | Gants en cuir doublés | Élégants et chauds.
+S O * * | Chaussettes à motifs originaux | Le petit plaisir du quotidien.
+M O * * | Sac en toile de créateur | Pratique et stylé.
+L O * * | Montre minimaliste | Un accessoire qui dure.
+M O * * | Pull en laine de saison | Un basique de qualité.
+S O * * | Bonnet en laine | Pour affronter l'hiver.
+M O * * | Ceinture en cuir artisanale | Fabriquée pour durer.
+M O * * | Lunettes de soleil | Le style et la protection.
+L O * * | Sneakers d'une marque qu'il ou elle aime | Dans sa pointure, bien sûr.
+S O * * | Foulard en soie imprimé | À nouer de mille façons.
+M O * * | Pyjama douillet | Pour des nuits confortables.
+M E * * | Séance avec un conseiller en style | Redécouvrir sa garde-robe.
+M O * * | Chapeau en feutre | Une touche de caractère.
+
+@ beaute
+M O * * | Coffret de soins naturels | Crèmes et huiles bio.
+S O * * | Savon artisanal à froid | Doux pour la peau, bon pour la planète.
+M O * * | Parfum de niche découverte | Des miniatures pour trouver son parfum.
+M E * * | Soin du visage en institut | Un moment rien que pour soi.
+S O * * | Baume à lèvres et crème mains | Les indispensables de l'hiver.
+M O * * | Rouleau de jade et gua sha | Un rituel beauté relaxant.
+S H * * | Sels de bain maison | Parfumés aux huiles essentielles.
+M A * * | Box beauté mensuelle | Des découvertes chaque mois.
+M O * * | Trousse de toilette en cuir | Élégante pour voyager.
+L O * * | Sèche-cheveux haut de gamme | Rapide et doux pour les cheveux.
+M E * * | Barbier traditionnel | Rasage à l'ancienne et soin de la barbe.
+S O * * | Kit d'entretien de la barbe | Huile, peigne et baume.
+
+@ bijoux
+M O * * | Bracelet à son initiale | Délicat et personnel.
+L O * * | Bague fine en or | Un bijou qui se porte tous les jours.
+M O * * | Boucles d'oreilles de créatrice | Une pièce unique.
+S O * * | Boîte à bijoux en velours | Pour ranger ses trésors.
+M O * pa | Collier avec date gravée | Le jour de votre rencontre.
+M E * * | Atelier création de bague | Façonner son propre bijou.
+L O * * | Boutons de manchette | Élégance des grands jours.
+M O * * | Bijou en pierres naturelles | Une couleur qui lui ressemble.
+
+@ bien_etre
+M E * * | Massage relaxant | Une heure de pure détente.
+M O * * | Tapis de yoga écologique | Antidérapant et doux.
+M E * * | Carte de cours de yoga | Plusieurs séances dans un studio.
+S O * * | Bouillotte en laine | Le réconfort des soirées froides.
+M O * * | Coussin de méditation | Pour une pratique confortable.
+L E * * | Journée au spa | Hammam, sauna et soins.
+M O * * | Lampe de luminothérapie | Contre la fatigue de l'hiver.
+S O * * | Huiles essentielles relaxantes | Lavande, orange douce, camomille.
+M O * * | Couverture lestée | Un sommeil plus profond.
+M A * * | Abonnement à une appli de méditation | Une pause guidée chaque jour.
+M O * * | Peignoir moelleux | Le cocon après la douche.
+S O * * | Masque de nuit en soie | Pour des nuits réparatrices.
+
+@ spiritualite
+S O * * | Bougies et encens naturels | Pour créer une atmosphère apaisante.
+S O * * | Journal de gratitude | Noter chaque jour ce qui fait du bien.
+M E * * | Retraite de méditation d'une journée | Un temps pour se ressourcer.
+S O * * | Bol chantant tibétain | Des vibrations apaisantes.
+S O * * | Livre de sagesse et de philosophie | Des pistes pour mieux vivre.
+M O * * | Jeu de cartes d'introspection | Pour mieux se connaître.
