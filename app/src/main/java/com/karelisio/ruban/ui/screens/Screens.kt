@@ -1,0 +1,51 @@
+package com.karelisio.ruban.ui.screens
+
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.navigation.NavGraphBuilder
+import androidx.navigation.toRoute
+import com.karelisio.ruban.ui.components.EmptyState
+import com.karelisio.ruban.ui.nav.LocalNav
+import com.karelisio.ruban.ui.nav.Route
+import com.karelisio.ruban.ui.nav.screen
+import com.karelisio.ruban.ui.screens.home.HomeScreen
+
+/** Registers every destination of the app. */
+object Screens {
+    fun register(builder: NavGraphBuilder) = with(builder) {
+        screen<Route.Home> { HomeScreen(it.toRoute<Route.Home>().tab) }
+        screen<Route.Onboarding> { Placeholder("Bienvenue") }
+        screen<Route.PersonDetail> { Placeholder("Proche") }
+        screen<Route.PersonEdit> { Placeholder("Modifier le proche") }
+        screen<Route.IdeaDetail> { Placeholder("Idée") }
+        screen<Route.IdeaEdit> { Placeholder("Nouvelle idée") }
+        screen<Route.EventDetail> { Placeholder("Événement") }
+        screen<Route.EventEdit> { Placeholder("Événement") }
+        screen<Route.YearRecap> { Placeholder("Récap") }
+        screen<Route.Inspire> { Placeholder("Inspire-moi") }
+        screen<Route.Received> { Placeholder("Cadeaux reçus") }
+        screen<Route.ReceivedEdit> { Placeholder("Cadeau reçu") }
+        screen<Route.Settings> { Placeholder("Réglages") }
+        screen<Route.Permissions> { Placeholder("Autorisations") }
+        screen<Route.Backup> { Placeholder("Sauvegarde") }
+    }
+}
+
+@Composable
+private fun Placeholder(title: String) {
+    val nav = LocalNav.current
+    Scaffold(topBar = {
+        TopAppBar(title = { Text(title) }, navigationIcon = {
+            IconButton(onClick = nav::back) { Icon(Icons.AutoMirrored.Rounded.ArrowBack, "Retour") }
+        })
+    }) { p -> EmptyState("🎀", title, "Bientôt ici.", Modifier.fillMaxSize().padding(p)) }
+}
